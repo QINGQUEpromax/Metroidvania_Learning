@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public PlayerWallJump wallJumpState { get; private set; }
     public PlayerDash dashState { get; private set; }
     public PlayerAttack attackState { get; private set; }
+    public PlayerJumpAttack jumpAttackState {  get; private set; }
     public Vector2 moveInput { get; private set; }
 
     [Header("ÒÆ¶¯ÌøÔ¾")]
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
 
     [Header("¹¥»÷")]
     public Vector2[] attackForce;
+    public Vector2 jumpAttackForce;
     public float attackDuration;
     public float resetInterval;//ÖØÖÃ¹¥»÷
 
@@ -68,6 +70,7 @@ public class Player : MonoBehaviour
         wallJumpState = new PlayerWallJump(this, stateMachine, "jumpFall");
         dashState = new PlayerDash(this, stateMachine, "dash");
         attackState = new PlayerAttack(this, stateMachine, "attack");
+        jumpAttackState = new PlayerJumpAttack(this, stateMachine, "jumpAttack");
     }
 
     private void OnEnable()
