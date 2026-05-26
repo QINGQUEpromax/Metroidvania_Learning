@@ -7,6 +7,12 @@
 UserSettings/
 
 MemoryCaptures/
+Recordings/
+
+Assets/AssetStoreTools*
+
+.vs/
+.gradle/
 
 *.csproj
 *.unityproj
