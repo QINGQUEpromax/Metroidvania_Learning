@@ -48,6 +48,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector2 offset;//偏移量
     [SerializeField] private float groundDetectRadius;//检测半径
     [SerializeField] private float wallDetectDistance;//检测距离墙体距离
+    [SerializeField] private Transform firstDetectRay;//第一个墙体检测射线起始位置
+    [SerializeField] private Transform secondDetectRay;//第二个墙体检测射线起始位置
     public LayerMask groundLayer;
     public Vector2 wallJumpForce;
     public int facingDir { get; private set; } = 1;
@@ -147,12 +149,14 @@ public class Player : MonoBehaviour
     {
         Vector2 pos = transform.position;
         isGrounded = Physics2D.OverlapCircle(pos + offset,groundDetectRadius, groundLayer);
-        isOnWall = Physics2D.Raycast(transform.position,Vector2.right * facingDir,wallDetectDistance,groundLayer);
+        isOnWall = Physics2D.Raycast(firstDetectRay.position,Vector2.right * facingDir,wallDetectDistance,groundLayer)
+                && Physics2D.Raycast(secondDetectRay.position, Vector2.right * facingDir, wallDetectDistance, groundLayer);
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(facingDir * wallDetectDistance, 0,0));
+        Gizmos.DrawLine(firstDetectRay.position, firstDetectRay.position + new Vector3(facingDir * wallDetectDistance, 0,0));
+        Gizmos.DrawLine(secondDetectRay.position, secondDetectRay.position + new Vector3(facingDir * wallDetectDistance, 0,0));
         Vector2 pos = transform.position;
         Gizmos.DrawWireSphere(pos + offset, groundDetectRadius);
     }
