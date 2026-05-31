@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpAttack : EntityState
+public class PlayerJumpAttack : PlayerState
 {
     private bool touchGround;
     public PlayerJumpAttack(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)

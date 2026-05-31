@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWallJump : EntityState
+public class PlayerWallJump : PlayerState
 {
     public PlayerWallJump(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)
     {

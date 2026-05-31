@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWallSlide : EntityState
+public class PlayerWallSlide : PlayerState
 {
     public PlayerWallSlide(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : EntityState
+public class PlayerAttack : PlayerState
 {
     private float attackTimer;
     private float lastAttackTime;

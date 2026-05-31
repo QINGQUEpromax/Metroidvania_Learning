@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerGrounded : EntityState
+public class PlayerGrounded : PlayerState
 {
     public PlayerGrounded(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)
     {
