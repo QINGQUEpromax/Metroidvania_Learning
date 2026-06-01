@@ -421,7 +421,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: -1.08}
   groundDetectRadius: 0.33
+  aheadCheckDistance: 0
   wallDetectDistance: 0.45
+  roadAheadCheck: {fileID: 506494063}
   firstDetectRay: {fileID: 1282465562}
   secondDetectRay: {fileID: 897246910}
   groundLayer:
@@ -550,7 +552,7 @@ Transform:
   m_GameObject: {fileID: 506494057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84, y: 5.42, z: 0}
+  m_LocalPosition: {x: -7.59, y: 1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -725,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9003, y: 1.3988276, z: 16.753632}
+  m_LocalPosition: {x: -10.6503, y: -2.2511725, z: 16.753632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -852,6 +854,37 @@ Transform:
   - {fileID: 497744709}
   - {fileID: 1017704374}
   m_Father: {fileID: 203876238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &607299696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607299697}
+  m_Layer: 0
+  m_Name: groudCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &607299697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607299696}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.667, y: -0.927, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2043435172}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
@@ -1107,7 +1140,7 @@ Transform:
   m_GameObject: {fileID: 1302027078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9003, y: 1.3988276, z: 16.753632}
+  m_LocalPosition: {x: -10.6503, y: -2.2511725, z: 16.753632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9051,7 +9084,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3.5
-  m_Material: {fileID: 6200000, guid: 1e165fd8da162b0478d2db21d3b71daa, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9097,13 +9130,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0}
   groundDetectRadius: 0
-  wallDetectDistance: 0
+  aheadCheckDistance: 0.5
+  wallDetectDistance: 1
+  roadAheadCheck: {fileID: 607299697}
   firstDetectRay: {fileID: 2043435172}
-  secondDetectRay: {fileID: 2043435172}
+  secondDetectRay: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   wallJumpForce: {x: 0, y: 0}
+  idleTime: 2
+  moveSpeed: 2
+  moveAnimSpeedMultiplier: 1
 --- !u!212 &2043435171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9165,10 +9203,11 @@ Transform:
   m_GameObject: {fileID: 2043435166}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 4.67, z: 0}
+  m_LocalPosition: {x: -2.63, y: 4.39, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 607299697}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2090188161
