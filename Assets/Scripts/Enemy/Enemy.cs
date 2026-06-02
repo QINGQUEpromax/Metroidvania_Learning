@@ -34,6 +34,23 @@ public class Enemy : Character
     [SerializeField] private Transform playerCheck;
     [SerializeField] private float playerCheckDistance;
 
+    public Transform player {  get; private set; }
+
+    public void TryEnterBattleState(Transform player)
+    {
+        if (stateMachine.currentState == battleState || stateMachine.currentState == attackState)
+            return;
+            this.player = player;
+        stateMachine.ChangeState(battleState);
+    }
+
+    public Transform GetPlayerTransform()
+    {
+        if (player == null)
+            player = PlayerDetection().transform;
+
+        return player;
+    }
     public RaycastHit2D PlayerDetection()
     {
         RaycastHit2D hit = Physics2D.Raycast(playerCheck.position, Vector3.right * facingDir, playerCheckDistance, playerLayer | groundLayer);

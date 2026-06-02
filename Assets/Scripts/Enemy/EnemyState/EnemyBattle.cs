@@ -14,8 +14,13 @@ public class EnemyBattle : EnemyState
     public override void Enter()
     {
         base.Enter();
-        if(player == null)
-            player = enemy.PlayerDetection().transform;
+
+        UpdateBatteTimer();
+
+        if (player == null)
+        {
+            player = enemy.GetPlayerTransform();
+        }
 
         if (ShouldRetreat())
         {
