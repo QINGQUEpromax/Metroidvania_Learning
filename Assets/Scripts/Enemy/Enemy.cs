@@ -6,10 +6,63 @@ public class Enemy : Character
 {
     public EnemyIdle idleState;
     public EnemyMove moveState;
+    public EnemyAttack attackState;
+    public EnemyBattle battleState;
+
+    [Header("战斗细节")]
+    public float battleMoveSpeed;
+    public float attackDistance;
+    public float battleDuration;//脱战时间
+    public float minRetreatDistance = 1;
+    public Vector2 retreatVelocity;
 
     [Header("移动逻辑")]
     public float idleTime = 2f;
     public float moveSpeed = 2f;
+
+    [Header("探路检测")]
+    [SerializeField] private float aheadCheckDistance;//敌人检测前方地面距离
+    [SerializeField] private Transform roadAheadCheck;//检测敌人前方是否有路
+
+    public bool haveRoadAhead { get; private set; }//敌人检测前方是否有路
+
     [Range(0, 2)]
     public float moveAnimSpeedMultiplier = 1;
+
+    [Header("玩家检测")]
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private Transform playerCheck;
+    [SerializeField] private float playerCheckDistance;
+
+    public RaycastHit2D PlayerDetection()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(playerCheck.position, Vector3.right * facingDir, playerCheckDistance, playerLayer | groundLayer);
+
+        if (hit.collider == null || hit.collider.gameObject.layer != LayerMask.NameToLayer("Player"))
+            return default;
+
+        return hit;
+    }
+
+    protected override void DetectIsGrounded()
+    {
+        base.DetectIsGrounded();
+
+        haveRoadAhead = Physics2D.Raycast(roadAheadCheck.position, Vector2.down, aheadCheckDistance, groundLayer);
+    }
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+
+        Gizmos.DrawLine(roadAheadCheck.position, roadAheadCheck.position + Vector3.down * facingDir * aheadCheckDistance);//敌人
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * playerCheckDistance, 0,0));
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * attackDistance, 0,0));
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * minRetreatDistance, 0, 0));
+
+    }
 }

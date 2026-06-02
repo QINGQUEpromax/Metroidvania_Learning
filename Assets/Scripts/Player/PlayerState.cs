@@ -19,7 +19,7 @@ public class PlayerState: EntityState
     public override void Update()
     {
         base.Update();
-        anim.SetFloat("yVelocity", rb.velocity.y);
+       
         if (input.Player.Dash.WasPressedThisFrame() && CanDash())
             stateMachine.ChangeState(player.dashState);
     }
@@ -29,5 +29,11 @@ public class PlayerState: EntityState
         if (player.isOnWall || stateMachine.currentState == player.dashState)
             return false;
         return true;
+    }
+
+    protected override void UpdateAnimationParameters()
+    {
+        base.UpdateAnimationParameters();
+        anim.SetFloat("yVelocity", rb.velocity.y);
     }
 }

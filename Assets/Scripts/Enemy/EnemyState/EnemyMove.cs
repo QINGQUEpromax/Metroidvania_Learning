@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyMove : EnemyState
+public class EnemyMove : EnemyGround
 {
     public EnemyMove(Enemy enemy, StateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
@@ -26,7 +26,6 @@ public class EnemyMove : EnemyState
         enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir,rb.velocity.y);
         if (!enemy.haveRoadAhead || enemy.isOnWall)
         {
-            enemy.SetVelocity(0, rb.velocity.y);
             stateMachine.ChangeState(enemy.idleState);
         }
     }

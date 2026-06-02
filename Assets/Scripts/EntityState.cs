@@ -26,10 +26,15 @@ public abstract class EntityState
     public virtual void Update()
     {
         stateTimer -= Time.deltaTime;
-       
+        UpdateAnimationParameters();
     }
     public virtual void Exit()
     {
         anim.SetBool(animBoolName, false);
+    }
+
+    protected virtual void UpdateAnimationParameters()
+    {
+        
     }
 }

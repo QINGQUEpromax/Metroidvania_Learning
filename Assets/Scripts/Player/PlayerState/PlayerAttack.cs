@@ -33,6 +33,8 @@ public class PlayerAttack : PlayerState
     {
         base.Update();
 
+        HandleAttackVelocity();
+
         if (input.Player.Attack.WasPressedThisFrame())
             QueueNextAttack();
 
