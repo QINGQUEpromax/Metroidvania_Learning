@@ -8,6 +8,7 @@ public class Enemy : Character
     public EnemyMove moveState;
     public EnemyAttack attackState;
     public EnemyBattle battleState;
+    public EnemyDie dieState;
 
     [Header("战斗细节")]
     public float battleMoveSpeed;
@@ -36,6 +37,21 @@ public class Enemy : Character
 
     public Transform player {  get; private set; }
 
+    //敌人死亡
+    public override void CharacterDeath()
+    {
+        base.CharacterDeath();
+
+        stateMachine.ChangeState(dieState);
+    }
+
+    //处理玩家死亡时敌人逻辑
+    private void HandlePlayerDeath()
+    {
+        stateMachine.ChangeState(idleState);
+    }
+
+    //敌人进入战斗状态
     public void TryEnterBattleState(Transform player)
     {
         if (stateMachine.currentState == battleState || stateMachine.currentState == attackState)
@@ -44,6 +60,8 @@ public class Enemy : Character
         stateMachine.ChangeState(battleState);
     }
 
+
+    //敌人获取玩家位置
     public Transform GetPlayerTransform()
     {
         if (player == null)
@@ -51,6 +69,7 @@ public class Enemy : Character
 
         return player;
     }
+
     public RaycastHit2D PlayerDetection()
     {
         RaycastHit2D hit = Physics2D.Raycast(playerCheck.position, Vector3.right * facingDir, playerCheckDistance, playerLayer | groundLayer);
@@ -61,6 +80,7 @@ public class Enemy : Character
         return hit;
     }
 
+    //检测前方是否有路
     protected override void DetectIsGrounded()
     {
         base.DetectIsGrounded();
@@ -81,5 +101,15 @@ public class Enemy : Character
         Gizmos.color = Color.green;
         Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * minRetreatDistance, 0, 0));
 
+    }
+
+    private void OnEnable()
+    {
+        Player.OnPlayerDeath += HandlePlayerDeath;
+    }
+
+    private void OnDisable()
+    {
+        Player.OnPlayerDeath -= HandlePlayerDeath;
     }
 }

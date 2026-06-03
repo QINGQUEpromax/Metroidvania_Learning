@@ -625,8 +625,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.37078506}
-  m_Size: {x: 0.78, y: 1.9684299}
+  m_Offset: {x: 0, y: -0.3399998}
+  m_Size: {x: 0.78, y: 1.9305842}
   m_Direction: 0
 --- !u!114 &506494065
 MonoBehaviour:
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e52d637f0a6754fbcb599f421f9073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 40
   attackCenter: {fileID: 403080547}
   attackRadius: 1
   attackTarget:
@@ -658,8 +658,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e06778d31a37040821d3f3785b2ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHp: 0
   maxHp: 100
   isDead: 0
+  knockbackPower: {x: 1.5, y: 2.5}
+  heavyknockbackPower: {x: 7, y: 7}
+  knockbackDuration: 0.2
+  heavyknockbackDuration: 0.5
+  heavyDamageThreshold: 0.3
 --- !u!114 &506494067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9581,7 +9587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e52d637f0a6754fbcb599f421f9073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 30
   attackCenter: {fileID: 1946403110}
   attackRadius: 1
   attackTarget:
@@ -9599,8 +9605,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d2188960bfc74489fff8c1f723f81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 1000
+  currentHp: 0
+  maxHp: 100
   isDead: 0
+  knockbackPower: {x: 1.5, y: 2.5}
+  heavyknockbackPower: {x: 7, y: 7}
+  knockbackDuration: 0.2
+  heavyknockbackDuration: 0.5
+  heavyDamageThreshold: 0.3
 --- !u!114 &2043435175
 MonoBehaviour:
   m_ObjectHideFlags: 0

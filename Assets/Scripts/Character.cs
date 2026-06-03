@@ -22,6 +22,9 @@ public abstract class Character : MonoBehaviour
     public bool isGrounded { get; private set; }
     public bool isOnWall { get; private set; }
 
+    //受伤击退协程
+    private bool isKnockback;
+    private Coroutine knockbackCo;
 
     protected virtual void Awake()
     {
@@ -43,12 +46,33 @@ public abstract class Character : MonoBehaviour
         DetectIsGrounded();
     }
 
-   
+   //受伤击退协程
+   public void Knockback(Vector2 knockback, float knockbackDuration)
+    {
+        if(knockbackCo != null)
+            StopCoroutine(knockbackCo);
+
+        knockbackCo = StartCoroutine(KnockbackCo( knockback,knockbackDuration));
+    }
+
+   private IEnumerator KnockbackCo(Vector2 knockback,float knockbackDuration)
+    {
+        isKnockback = true;
+        rb.velocity = knockback;
+
+        yield return new WaitForSeconds(knockbackDuration);
+        
+        rb.velocity = Vector2.zero;
+        isKnockback = false;
+    }
 
     #region 基本移动逻辑
     //设置人物移动速度
     public void SetVelocity(float xSpeed, float ySpeed)
     {
+        if (isKnockback)
+            return;
+
         rb.velocity = new Vector2(xSpeed, ySpeed);
         HandleFlip(xSpeed);
     }
@@ -76,6 +100,12 @@ public abstract class Character : MonoBehaviour
         stateMachine.currentState.attackOver = true;
     }
 
+    //人物死亡
+    public virtual void CharacterDeath()
+    {
+
+    }
+
     //接地检测
     protected virtual void DetectIsGrounded()
     {
@@ -94,6 +124,7 @@ public abstract class Character : MonoBehaviour
         
     }
 
+    //绘图
     protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawLine(firstDetectRay.position, firstDetectRay.position + new Vector3(facingDir * wallDetectDistance, 0, 0));

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,6 +6,8 @@ using UnityEngine;
 
 public class Player : Character
 {
+    public static event Action OnPlayerDeath;
+
     public InputActions inputActions { get; private set; }
 
     public PlayerIdle idleState { get; private set; }
@@ -16,6 +19,7 @@ public class Player : Character
     public PlayerDash dashState { get; private set; }
     public PlayerAttack attackState { get; private set; }
     public PlayerJumpAttack jumpAttackState { get; private set; }
+    public PlayerDie dieState { get; private set; }
     public Vector2 moveInput { get; private set; }
 
     [Header("ÒÆ¶¯ÌøÔ¾")]
@@ -53,6 +57,7 @@ public class Player : Character
         dashState = new PlayerDash(this, stateMachine, "dash");
         attackState = new PlayerAttack(this, stateMachine, "attack");
         jumpAttackState = new PlayerJumpAttack(this, stateMachine, "jumpAttack");
+        dieState = new PlayerDie(this, stateMachine, "die");
     }
 
     protected override void Start()
@@ -60,6 +65,16 @@ public class Player : Character
         base.Start();
         stateMachine.initialize(idleState);
     }
+
+    //Íæ¼ÒËÀÍö
+    public override void CharacterDeath()
+    {
+        base.CharacterDeath();
+
+        OnPlayerDeath?.Invoke();
+        stateMachine.ChangeState(dieState);
+    }
+
     public void EnterAttackStateWithDelay()
     {
         if (queueAttackCo != null)
