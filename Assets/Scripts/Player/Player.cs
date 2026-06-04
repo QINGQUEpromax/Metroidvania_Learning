@@ -20,6 +20,7 @@ public class Player : Character
     public PlayerAttack attackState { get; private set; }
     public PlayerJumpAttack jumpAttackState { get; private set; }
     public PlayerDie dieState { get; private set; }
+    public PlayerCounter counterState { get; private set; }
     public Vector2 moveInput { get; private set; }
 
     [Header("ÒÆ¶¯ÌøÔ¾")]
@@ -58,6 +59,7 @@ public class Player : Character
         attackState = new PlayerAttack(this, stateMachine, "attack");
         jumpAttackState = new PlayerJumpAttack(this, stateMachine, "jumpAttack");
         dieState = new PlayerDie(this, stateMachine, "die");
+        counterState = new PlayerCounter(this, stateMachine, "counter");
     }
 
     protected override void Start()

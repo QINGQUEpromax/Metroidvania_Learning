@@ -12,17 +12,23 @@ public class PlayerGrounded : PlayerState
     {
         base.Update();
 
-        if (input.Player.Jump.WasPerformedThisFrame())
-            stateMachine.ChangeState(player.jumpState);
-
         if(rb.velocity.y < 0 && player.isGrounded == false)
         {
             stateMachine.ChangeState(player.fallState);
         }
 
+        if (input.Player.Jump.WasPressedThisFrame())
+            stateMachine.ChangeState(player.jumpState);
+
+
         if (input.Player.Attack.WasPressedThisFrame())
         {
             stateMachine.ChangeState(player.attackState);
+        }
+
+        if (input.Player.Counter.WasPressedThisFrame())
+        {
+            stateMachine.ChangeState(player.counterState);
         }
     }
 }

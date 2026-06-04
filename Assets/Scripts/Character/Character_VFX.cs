@@ -11,13 +11,13 @@ public class Character_VFX : MonoBehaviour
     [SerializeField] private float onDamageVfxDuration;
     private Material originalMaterial;
     private Coroutine onDamageVfxCoroutine;
-    private void Awake()
+    protected virtual void Awake()
     {
         sr = GetComponent<SpriteRenderer>();    
         originalMaterial = sr.material;
     }
 
-    public void PlayerOnDamageVfx()
+    public void PlayOnDamageVfx()
     {
         if(onDamageVfxCoroutine != null)
             StopCoroutine(onDamageVfxCoroutine);

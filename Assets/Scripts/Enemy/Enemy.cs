@@ -9,6 +9,7 @@ public class Enemy : Character
     public EnemyAttack attackState;
     public EnemyBattle battleState;
     public EnemyDie dieState;
+    public EnemyStunned stunnedState;
 
     [Header("Õ½¶·Ï¸½Ú")]
     public float battleMoveSpeed;
@@ -16,6 +17,11 @@ public class Enemy : Character
     public float battleDuration;//ÍÑÕ½Ê±¼ä
     public float minRetreatDistance = 1;
     public Vector2 retreatVelocity;
+
+    [Header("Ñ£ÔÎ×´Ì¬")]
+    public float stunnedDuration = 1f;
+    public Vector2 stunnedVelocity;
+    public bool canBeStunned;
 
     [Header("ÒÆ¶¯Âß¼­")]
     public float idleTime = 2f;
@@ -36,6 +42,8 @@ public class Enemy : Character
     [SerializeField] private float playerCheckDistance;
 
     public Transform player {  get; private set; }
+
+    public void EnableCounterWindow(bool enable) => canBeStunned = enable;
 
     //µĞÈËËÀÍö
     public override void CharacterDeath()

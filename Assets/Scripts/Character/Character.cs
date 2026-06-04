@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Unity.VisualScripting;
 
 public abstract class Character : MonoBehaviour
 {
+    public event Action OnFlipped;
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
-    protected StateMachine stateMachine;
+    public StateMachine stateMachine { get; private set; }
 
     private bool facingright = true;
+
+    [Header("打击特效")]
+    public GameObject hitVfx;
+    public Transform vfxCreatedPos;//随机生成中心
+    public Vector2 leftBottom;//左下限制
+    public Vector2 rightUp;//右上限制
 
     [Header("接地触墙检测")]
     [SerializeField] private Vector2 offset;//偏移量
@@ -91,14 +100,11 @@ public abstract class Character : MonoBehaviour
         transform.Rotate(0, 180, 0);
         facingright = !facingright;
         facingDir = facingDir * -1;
+
+        OnFlipped?.Invoke();
     }
     #endregion
 
-    //攻击事件
-    private void AttackOver()
-    {
-        stateMachine.currentState.attackOver = true;
-    }
 
     //人物死亡
     public virtual void CharacterDeath()
@@ -123,6 +129,19 @@ public abstract class Character : MonoBehaviour
         }
         
     }
+
+    #region 打击特效逻辑
+    //生成打击特效
+    public void CreateHitVfx()
+    {
+        if (hitVfx == null)
+            return;
+
+        Vector3 offsetPos = new Vector3(UnityEngine.Random.Range(leftBottom.x,rightUp.x),UnityEngine.Random.Range(leftBottom.y,rightUp.y),0);
+        Instantiate(hitVfx, vfxCreatedPos.position + offsetPos, Quaternion.identity);
+    }
+
+    #endregion
 
     //绘图
     protected virtual void OnDrawGizmos()
