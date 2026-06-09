@@ -11,10 +11,13 @@ public abstract class Character : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     public StateMachine stateMachine { get; private set; }
 
+    public Combat_System combat { get; private set; }
+
     private bool facingright = true;
 
     [Header("打击特效")]
     public GameObject hitVfx;
+    public GameObject onCritHitVfx;
     public Transform vfxCreatedPos;//随机生成中心
     public Vector2 leftBottom;//左下限制
     public Vector2 rightUp;//右上限制
@@ -34,6 +37,7 @@ public abstract class Character : MonoBehaviour
     //受伤击退协程
     private bool isKnockback;
     private Coroutine knockbackCo;
+    private Coroutine slowDownCo;
 
     protected virtual void Awake()
     {
@@ -54,6 +58,7 @@ public abstract class Character : MonoBehaviour
         stateMachine.UpdateActiveState();
         DetectIsGrounded();
     }
+
 
    //受伤击退协程
    public void Knockback(Vector2 knockback, float knockbackDuration)
@@ -112,6 +117,20 @@ public abstract class Character : MonoBehaviour
 
     }
 
+    //减缓对方速度
+    public virtual void SlowDownEntity(float duration,float slowMultiplier)
+    {
+        if (slowDownCo != null)
+            StopCoroutine(slowDownCo);
+
+        slowDownCo = StartCoroutine(SlowDownEntityCo(duration, slowMultiplier));
+    }
+
+    protected virtual IEnumerator SlowDownEntityCo(float duration,float slowMultiplier)
+    {
+        yield return null;
+    }
+
     //接地检测
     protected virtual void DetectIsGrounded()
     {
@@ -129,19 +148,6 @@ public abstract class Character : MonoBehaviour
         }
         
     }
-
-    #region 打击特效逻辑
-    //生成打击特效
-    public void CreateHitVfx()
-    {
-        if (hitVfx == null)
-            return;
-
-        Vector3 offsetPos = new Vector3(UnityEngine.Random.Range(leftBottom.x,rightUp.x),UnityEngine.Random.Range(leftBottom.y,rightUp.y),0);
-        Instantiate(hitVfx, vfxCreatedPos.position + offsetPos, Quaternion.identity);
-    }
-
-    #endregion
 
     //绘图
     protected virtual void OnDrawGizmos()

@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : Character
@@ -67,7 +65,42 @@ public class Player : Character
         base.Start();
         stateMachine.initialize(idleState);
     }
+    protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
+    {
+        float originalMoveSpeed = moveSpeed;
+        float originalJumpForce = jumpForce;
+        float originalAnimSpeed = anim.speed;
+        Vector2 originalwallJump = wallJumpForce;
+        Vector2 originalJumpAttack = jumpAttackForce;
+        Vector2[] originalAttackForce = new Vector2[attackForce.Length];
+        Array.Copy(attackForce, originalAttackForce, attackForce.Length);
 
+        float speedMultiplier = 1 - slowMultiplier;
+
+        moveSpeed = moveSpeed * speedMultiplier;
+        jumpForce = jumpForce * speedMultiplier;
+        anim.speed = anim.speed * speedMultiplier;
+        wallJumpForce = wallJumpForce * speedMultiplier;
+        jumpAttackForce = jumpAttackForce * speedMultiplier;
+        for (int i = 0; i < attackForce.Length; i++)
+        {
+            attackForce[i] = attackForce[i] * speedMultiplier;
+        }
+
+        yield return new WaitForSeconds(duration);
+
+        moveSpeed = originalMoveSpeed;
+        jumpForce = originalJumpForce;
+        anim.speed = originalAnimSpeed;
+        wallJumpForce = originalwallJump;
+        jumpAttackForce = originalJumpAttack;
+
+        for (int i = 0; i < attackForce.Length; i++)
+        {
+            attackForce[i] = originalAttackForce[i];
+
+        }
+    }
     //Íæ¼ÒËÀÍö
     public override void CharacterDeath()
     {

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Character
@@ -41,8 +40,26 @@ public class Enemy : Character
     [SerializeField] private Transform playerCheck;
     [SerializeField] private float playerCheckDistance;
 
-    public Transform player {  get; private set; }
+    public Transform player { get; private set; }
 
+    protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
+    {
+        float originalMoveSpeed = moveSpeed;
+        float originalBattleSpeed = battleMoveSpeed;
+        float originalAnimSpeed = anim.speed;
+
+        float speedMultiplier = 1 - slowMultiplier;
+
+        moveSpeed = moveSpeed * speedMultiplier;
+        battleMoveSpeed = battleMoveSpeed * speedMultiplier;
+        anim.speed = anim.speed * speedMultiplier;
+
+        yield return new WaitForSeconds(duration);
+
+        moveSpeed = originalMoveSpeed;
+        battleMoveSpeed = originalBattleSpeed;
+        anim.speed = originalAnimSpeed;
+    }
     public void EnableCounterWindow(bool enable) => canBeStunned = enable;
 
     //µ–»ÀÀ¿Õˆ
@@ -64,7 +81,7 @@ public class Enemy : Character
     {
         if (stateMachine.currentState == battleState || stateMachine.currentState == attackState)
             return;
-            this.player = player;
+        this.player = player;
         stateMachine.ChangeState(battleState);
     }
 
@@ -103,9 +120,9 @@ public class Enemy : Character
         Gizmos.DrawLine(roadAheadCheck.position, roadAheadCheck.position + Vector3.down * facingDir * aheadCheckDistance);//µ–»À
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * playerCheckDistance, 0,0));
+        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * playerCheckDistance, 0, 0));
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * attackDistance, 0,0));
+        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * attackDistance, 0, 0));
         Gizmos.color = Color.green;
         Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(facingDir * minRetreatDistance, 0, 0));
 

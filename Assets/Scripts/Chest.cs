@@ -11,7 +11,7 @@ public class Chest : MonoBehaviour , IDamage
     [Header("´ò¿ªÏ¸½Ú")]
     [SerializeField] private Vector2 openPower;
 
-    public void TakeDamage(float damage, float duration, Transform damageSource)
+    public void TakeDamage(float damage, float elementDamage, ElementType element, float duration, Transform damageSource)
     {
         vfx.PlayOnDamageVfx();
         anim.SetBool("open",true);

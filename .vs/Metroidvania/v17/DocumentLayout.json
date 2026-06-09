@@ -3,84 +3,64 @@
   "WorkspaceRootPath": "D:\\Unity Program\\Metroidvania\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\player\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\player\\playerstate\\playercounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate\\playercounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemy_skeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy_skeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\interface\\idamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\idamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\ui\\uiminhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uiminhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemy_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemystate\\enemyattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemystate\\enemyattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\combat_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\character_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemystate\\enemystunned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemystate\\enemystunned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\character_vfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character_vfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\elementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\elementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\vfx\\hitvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\vfx\\hitvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemy_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemy_vfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy_vfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\interface\\icounterable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\icounterable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\character_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character_VFX.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Character_VFX.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character_Health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Character_Health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\statsystem\\stats_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statsystem\\stats_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\player\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy_Health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemy_Health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\interface\\idamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\idamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\IDamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\IDamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\vfx\\hitvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\vfx\\hitvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Entity_StatusHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Character\\Entity_StatusHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,254 +90,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HitVfx.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\VFX\\HitVfx.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\VFX\\HitVfx.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\VFX\\HitVfx.cs",
-              "RelativeToolTip": "Assets\\Scripts\\VFX\\HitVfx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAADwv0oAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T15:56:52.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UIMinHealthBar.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UIMinHealthBar.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIMinHealthBar.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UIMinHealthBar.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UIMinHealthBar.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvw4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T14:38:16.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Chest.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Chest.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Chest.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Chest.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Chest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:27:24.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IDamagable.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Interface\\IDamagable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\IDamagable.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Interface\\IDamagable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interface\\IDamagable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:19:45.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Character_Health.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character_Health.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Character_Health.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADYAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:05:39.517Z",
+              "WhenOpened": "2026-06-07T12:55:27.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Enemy_Health.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_Health.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy_Health.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Title": "Enemy_VFX.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_VFX.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_VFX.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_VFX.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy_VFX.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T13:05:35.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnemyAttack.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\EnemyState\\EnemyAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyState\\EnemyAttack.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\EnemyState\\EnemyAttack.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyState\\EnemyAttack.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T12:42:40.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EnemyStunned.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\EnemyState\\EnemyStunned.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyState\\EnemyStunned.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\EnemyState\\EnemyStunned.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyState\\EnemyStunned.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBQAAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T12:35:33.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Combat_System.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Combat_System.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat_System.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Combat_System.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Combat_System.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T13:44:35.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Character.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Character.cs",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAswI4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T11:21:10.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player_Combat.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\Player_Combat.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player_Combat.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\Player_Combat.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Player_Combat.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCsAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:53:20.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerCounter.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\PlayerState\\PlayerCounter.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState\\PlayerCounter.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\PlayerState\\PlayerCounter.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState\\PlayerCounter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T08:21:28.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ICounterable.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Interface\\ICounterable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\ICounterable.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Interface\\ICounterable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interface\\ICounterable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:07:42.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Character_VFX.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character_VFX.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character_VFX.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character_VFX.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character_VFX.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T13:59:04.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IDamagable.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\IDamagable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\IDamagable.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\IDamagable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\IDamagable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T13:38:00.051Z"
+              "WhenOpened": "2026-06-07T12:17:33.461Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Enemy_Skeleton.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_Skeleton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_Skeleton.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_Skeleton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy_Skeleton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAArAAAA",
+              "Title": "Character_VFX.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_VFX.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character_VFX.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_VFX.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Character\\Character_VFX.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAowGkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T10:57:25.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T12:17:09.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy.cs",
               "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAmAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwC8AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T10:57:25.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T12:02:03.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 14,
+              "Title": "Entity_StatusHandler.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Entity_StatusHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Entity_StatusHandler.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Entity_StatusHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Character\\Entity_StatusHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:33:06.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HitVfx.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\VFX\\HitVfx.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\VFX\\HitVfx.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\VFX\\HitVfx.cs",
+              "RelativeToolTip": "Assets\\Scripts\\VFX\\HitVfx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T09:35:38.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Character.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Character\\Character.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAtwHgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T10:20:55.355Z"
+              "WhenOpened": "2026-06-07T09:13:14.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Character_Health.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character_Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character_Health.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character_Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character_Health.cs",
+              "DocumentIndex": 11,
+              "Title": "Player_Combat.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\Player_Combat.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player_Combat.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Player\\Player_Combat.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Player_Combat.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAtwDAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T04:09:43.369Z"
+              "WhenOpened": "2026-06-07T08:44:47.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 5,
               "Title": "Enemy_Health.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy_Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy_Health.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy_Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy_Health.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_Health.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enemy\\Enemy_Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy_Health.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T04:09:35.843Z"
+              "WhenOpened": "2026-06-07T08:43:32.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Character_Health.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character_Health.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Character\\Character_Health.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:39:49.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Chest.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Chest.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Chest.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Chest.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Chest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:37:59.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IDamagable.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Interface\\IDamagable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\IDamagable.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Interface\\IDamagable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interface\\IDamagable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:37:23.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Combat_System.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Combat_System.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat_System.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Combat_System.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat_System.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwAkAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:36:50.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ElementType.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\ElementType.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ElementType.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\ElementType.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ElementType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:11:02.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Stats_System.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswDUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:06:50.209Z"
             }
           ]
         }

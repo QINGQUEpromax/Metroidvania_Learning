@@ -8,10 +8,10 @@ public class Character_Health : MonoBehaviour , IDamage
     private Slider healthBar;
     private Character_VFX vfx;
     private Character character;
+    private Stats_System stats;
 
     [Header("ÑªÁ¿½¡¿µ")]
     [SerializeField] protected float currentHp;
-    [SerializeField] protected float maxHp = 100;
     [SerializeField] protected bool isDead;
 
     [Header("ÊÜÉË»÷ÍË")]
@@ -28,27 +28,46 @@ public class Character_Health : MonoBehaviour , IDamage
         vfx = GetComponent<Character_VFX>();
         character = GetComponent<Character>();
         healthBar = GetComponentInChildren<Slider>();
+        stats = GetComponentInChildren<Stats_System>();
 
-        currentHp = maxHp;
+        currentHp = stats.GetMaxHealth();
         UpdateHealthBar();
     }
 
+    //¸ÅÂÊÉÁ±Ü¹¥»÷
+    public bool AttackEvaded() => Random.Range(0, 100) < stats.GetEvasion();
+
+
     //ÊÜÉËÂß¼­
-    public virtual void TakeDamage(float damage,float duration,Transform damageSource) 
+    public virtual void TakeDamage(float damage,float elementDamage,ElementType element, float duration,Transform damageSource)
     {
         if (isDead)
             return;
-        Vector2 knockback = CalculateKnockback(damage,damageSource);
 
-        character?.Knockback(knockback, duration);
-        vfx?.PlayOnDamageVfx();
-        ReduceHp(damage);
+        Stats_System attackerStats = damageSource.GetComponent<Stats_System>();
+        float armorReduction = attackerStats != null ? attackerStats.GetArmorReduction() : 0;
+
+        float mitigation = stats.GetArmorMitigation(armorReduction);
+        float PhysicalDamage = damage * (1 - mitigation);
+
+        float resistance = stats.GetElementResistance(element);
+        float finalElementDamage = elementDamage * (1 - resistance);
+
+        TakeKnockback(duration, damageSource, PhysicalDamage);
+        ReduceHp(PhysicalDamage + finalElementDamage);
     }
-    
-   
+
+    private void TakeKnockback(float duration, Transform damageSource, float finalDamage)
+    {
+        Vector2 knockback = CalculateKnockback(finalDamage, damageSource);
+        character?.Knockback(knockback, duration);
+    }
+
+
     //ÑªÁ¿¼õÉÙ
     protected void ReduceHp(float damage)
     {
+        vfx?.PlayOnDamageVfx();
         currentHp -= damage;
         UpdateHealthBar();
 
@@ -68,7 +87,7 @@ public class Character_Health : MonoBehaviour , IDamage
         if (healthBar == null)
             return;
 
-        healthBar.value = currentHp / maxHp;
+        healthBar.value = currentHp / stats.GetMaxHealth();
     }
 
     //¼ÆËã»÷ÍËÊôÐÔ
@@ -82,7 +101,7 @@ public class Character_Health : MonoBehaviour , IDamage
         return knockback;
     }
 
-    public float CalculateDuration(float damage) => damage / maxHp >= heavyDamageThreshold ? heavyknockbackDuration : knockbackDuration;
-    private bool IsHeavyDamage(float damage) => damage / maxHp >= heavyDamageThreshold;
+    public float CalculateDuration(float damage) => damage / stats.GetMaxHealth() >= heavyDamageThreshold ? heavyknockbackDuration : knockbackDuration;
+    private bool IsHeavyDamage(float damage) => damage / stats.GetMaxHealth() >= heavyDamageThreshold;
 
 }

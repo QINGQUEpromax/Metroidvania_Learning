@@ -12,5 +12,10 @@ public class Enemy_VFX : Character_VFX
         base.Awake();
         attackAlert.SetActive(false);
     }
-    public void EnableAttackAlert(bool enable) => attackAlert.SetActive(enable);
+    public void EnableAttackAlert(bool enable) 
+    {
+        if (attackAlert == null)
+            return; 
+        attackAlert.SetActive(enable); 
+    }
 }

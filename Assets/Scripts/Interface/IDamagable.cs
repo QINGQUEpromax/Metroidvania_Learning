@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IDamage
 {
-    public void TakeDamage(float damage,float duration, Transform damageSource);
+    public void TakeDamage(float damage,float elementDamage,ElementType element,float duration, Transform damageSource);
 }

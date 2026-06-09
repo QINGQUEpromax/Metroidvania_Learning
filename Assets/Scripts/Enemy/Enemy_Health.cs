@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy_Health : Character_Health
 {
     private Enemy enemy => GetComponent<Enemy>();
-    public override void TakeDamage(float damage,float duration,Transform damageSource)
+    public override void TakeDamage(float damage,float elementDamage,ElementType element, float duration,Transform damageSource)
     {
-        base.TakeDamage(damage,duration,damageSource);
+        base.TakeDamage(damage,elementDamage,element,duration,damageSource);
 
         if (isDead)
             return;
