@@ -3,7 +3,8 @@ guid: f8185044c776df849aa69165956ebbd5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lightningStrikeVfx: {fileID: 7099000620408239791, guid: 2369b36b9986e2e45b521e3f8a8e065b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

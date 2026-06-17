@@ -65,7 +65,7 @@ public class Character_Health : MonoBehaviour , IDamage
 
 
     //ÑªÁ¿¼õÉÙ
-    protected void ReduceHp(float damage)
+    public void ReduceHp(float damage)
     {
         vfx?.PlayOnDamageVfx();
         currentHp -= damage;

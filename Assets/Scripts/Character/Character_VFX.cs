@@ -20,8 +20,9 @@ public class Character_VFX : MonoBehaviour
     public Vector2 rightUp;//右上限制
 
     [Header("受到元素攻击特效")]
-    [SerializeField] private Color fireVfx = Color.green;
     [SerializeField] private Color chillVfx = Color.cyan;
+    [SerializeField] private Color burnVfx = Color.red;
+    [SerializeField] private Color electrifyVfx = Color.yellow;
     private Color originalColor;
     private Color hitVfxColor;
     
@@ -37,9 +38,18 @@ public class Character_VFX : MonoBehaviour
     {
         if (element == ElementType.Ice)
             StartCoroutine(PlayStatusVfxCo(duration, chillVfx));
-
+        if (element == ElementType.Fire)
+            StartCoroutine(PlayStatusVfxCo(duration, burnVfx));
+        if (element == ElementType.Lightning)
+            StartCoroutine(PlayStatusVfxCo(duration, electrifyVfx));
     }
 
+    public void StopAllVfx()
+    {
+        StopAllCoroutines();
+        sr.color = Color.white;
+        sr.material = originalMaterial;
+    }
 
     private IEnumerator PlayStatusVfxCo(float duration, Color effectColor)
     {
@@ -90,7 +100,7 @@ public class Character_VFX : MonoBehaviour
                 hitVfxColor = default;
                 break;
             case ElementType.Fire:
-                hitVfxColor = fireVfx;           
+                hitVfxColor = burnVfx;           
                 break;
             case ElementType.Ice:
                 hitVfxColor = chillVfx;

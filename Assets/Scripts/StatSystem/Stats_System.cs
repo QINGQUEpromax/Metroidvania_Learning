@@ -8,7 +8,7 @@ public class Stats_System : MonoBehaviour
     public Stat maxHp;
 
 
-    public float GetElementDamage(out ElementType element)
+    public float GetElementDamage(out ElementType element,float scaleFactor = 1f)
     {
         float fireDamage = offense.fireDamage.GetValue();
         float iceDamage = offense.iceDamage.GetValue();
@@ -32,7 +32,7 @@ public class Stats_System : MonoBehaviour
         float weakerElementsDamage = Mathf.Max(bonusFire, bonusIce, bonusLightning);
         float finalDamage = highestDamage + weakerElementsDamage + bonusElementDamage;
 
-        return finalDamage;
+        return finalDamage * scaleFactor;
     }
 
     public float GetElementResistance(ElementType element)
@@ -63,7 +63,7 @@ public class Stats_System : MonoBehaviour
         return finalResistance;
     }
 
-    public float GetPhysicalDamage(out bool isCrit)
+    public float GetPhysicalDamage(out bool isCrit,float scaleFactor = 1f)
     {
         float baseDamage = offense.damage.GetValue();
         float bonusDamage = major.strength.GetValue();
@@ -81,7 +81,7 @@ public class Stats_System : MonoBehaviour
 
         float finalDamage = isCrit ? totalBaseDamage * (1 + critPower) : totalBaseDamage;
 
-        return finalDamage;
+        return finalDamage * scaleFactor;
     }
 
     public float GetArmorMitigation(float armorReduction)

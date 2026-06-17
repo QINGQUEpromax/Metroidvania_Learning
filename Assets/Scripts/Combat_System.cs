@@ -15,9 +15,13 @@ public class Combat_System : MonoBehaviour
     public float attackRadius;
     public LayerMask attackTarget;
 
-    [Header("×´Ì¬Ó°ÏìÂß¼­")]
+    [Header("×´Ì¬Ð§¹ûÂß¼­")]
     [SerializeField] private float defaultDuration = 3;
     [SerializeField] private float chillslowMultipier = .5f;
+    [SerializeField] private float electrifyChargeBuildUp = .4f;
+    [Space]
+    [SerializeField] private float fireScale = .8f;
+    [SerializeField] private float lightningScale = 2.5f;
 
 
     public bool attackIsEvaded {  get; private set; }
@@ -67,7 +71,7 @@ public class Combat_System : MonoBehaviour
         }
     }
 
-    public void ApplyStatusEffect(Transform target,ElementType element)
+    public void ApplyStatusEffect(Transform target,ElementType element,float scaleFactor = 1f)
     {
         Entity_StatusHandler statusHandler = target.GetComponent<Entity_StatusHandler>();
 
@@ -76,8 +80,23 @@ public class Combat_System : MonoBehaviour
 
         if (element == ElementType.Ice && statusHandler.CanBeApplied(ElementType.Ice))
         {
-            statusHandler.ApplyChilledEffect(defaultDuration, chillslowMultipier);
+            statusHandler.ApplyChillEffect(defaultDuration, chillslowMultipier);
         }
+        
+        if (element == ElementType.Fire && statusHandler.CanBeApplied(ElementType.Fire))
+        {
+            scaleFactor = fireScale;
+            float fireDamage = stats.offense.fireDamage.GetValue() * scaleFactor;
+            statusHandler.ApplyBurnEffect(defaultDuration, fireDamage);
+        }
+
+        if(element == ElementType.Lightning && statusHandler.CanBeApplied(ElementType.Lightning))
+        {
+            scaleFactor = lightningScale;
+            float lightningDamage = stats.offense.lightningDamage.GetValue() * scaleFactor;
+            statusHandler.ApplyElectrifyEffect(defaultDuration, lightningDamage,electrifyChargeBuildUp);
+        }
+
     }
     
     protected Collider2D[] GetTargetCollider()
