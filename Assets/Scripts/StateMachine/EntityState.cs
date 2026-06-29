@@ -11,6 +11,7 @@ public abstract class EntityState
 
     protected Animator anim;
     protected Rigidbody2D rb;
+    protected Stats_System stats;
 
     public bool attackOver;
     public EntityState(StateMachine stateMachine, string stateName)
@@ -36,5 +37,11 @@ public abstract class EntityState
     protected virtual void UpdateAnimationParameters()
     {
         
+    }
+
+    public void SyncAttackSpeed()
+    {
+        float attackSpeed = stats.offense.attackSpped.GetValue();
+        anim.SetFloat("attackSpeedMultiplier", attackSpeed);
     }
 }

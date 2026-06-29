@@ -7,6 +7,12 @@ public class EnemyAttack : EnemyState
     public EnemyAttack(Enemy enemy, StateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
     }
+
+    public override void Enter()
+    {
+        base.Enter();
+        SyncAttackSpeed();
+    }
     public override void Update()
     {
         base.Update();

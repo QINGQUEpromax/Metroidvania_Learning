@@ -9,6 +9,7 @@ public abstract class Character : MonoBehaviour
     public event Action OnFlipped;
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
+    public Stats_System stats { get; private set; }
     public StateMachine stateMachine { get; private set; }
 
     public Combat_System combat { get; private set; }
@@ -43,7 +44,7 @@ public abstract class Character : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-
+        stats = GetComponent<Stats_System>();
         stateMachine = new StateMachine();
         
     }

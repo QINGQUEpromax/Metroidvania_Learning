@@ -11,6 +11,7 @@ public class EnemyState : EntityState
 
         rb = enemy.rb;
         anim = enemy.anim;
+        stats = enemy.stats;
     }
 
     public override void Update()

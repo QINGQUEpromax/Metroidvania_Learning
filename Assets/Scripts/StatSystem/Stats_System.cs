@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Stats_System : MonoBehaviour
 {
+    public Stats_ResourceGroup resources;
     public Stats_MajorGroup major;
     public Stats_OffenseGroup offense;
     public Stats_DefenseGroup defense;
@@ -111,11 +112,11 @@ public class Stats_System : MonoBehaviour
 
     public float GetMaxHealth()
     {
-        float baseHp = maxHp.GetValue();
-        float bonusHp = major.vitality.GetValue() * 5;
-        float finalHp = baseHp + bonusHp;
+        float baseMaxHealth = resources.maxHealth.GetValue();
+        float bonusMaxHealth = major.vitality.GetValue() * 5;
+        float finalMaxHealth = baseMaxHealth + bonusMaxHealth;
 
-        return finalHp;
+        return finalMaxHealth;
     }
 
     public float GetEvasion()

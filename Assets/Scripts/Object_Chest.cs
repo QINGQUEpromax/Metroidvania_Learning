@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour , IDamage
+public class Object_Chest : MonoBehaviour , IDamage
 {
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
     private Animator anim => GetComponent<Animator>();

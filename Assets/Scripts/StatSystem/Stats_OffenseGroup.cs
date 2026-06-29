@@ -6,6 +6,8 @@ using UnityEngine;
 [Serializable]
 public class Stats_OffenseGroup
 {
+    public Stat attackSpped;
+
     //ÎïÀí¹¥»÷
     public Stat damage;
     public Stat critPower;

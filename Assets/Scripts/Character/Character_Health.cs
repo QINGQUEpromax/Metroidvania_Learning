@@ -11,8 +11,12 @@ public class Character_Health : MonoBehaviour , IDamage
     private Stats_System stats;
 
     [Header("ÑªÁ¿½¡¿µ")]
-    [SerializeField] protected float currentHp;
+    [SerializeField] protected float currentHealth;
     [SerializeField] protected bool isDead;
+
+    [Header("ÑªÁ¿»Ø¸´")]
+    [SerializeField] private float regenInterval = 1;
+    [SerializeField] private bool canRegenHealth = true;
 
     [Header("ÊÜÉË»÷ÍË")]
     [SerializeField] private Vector2 knockbackPower;
@@ -30,8 +34,10 @@ public class Character_Health : MonoBehaviour , IDamage
         healthBar = GetComponentInChildren<Slider>();
         stats = GetComponentInChildren<Stats_System>();
 
-        currentHp = stats.GetMaxHealth();
+        currentHealth = stats.GetMaxHealth();
         UpdateHealthBar();
+
+        InvokeRepeating(nameof(RegenHealth),0, regenInterval);
     }
 
     //¸ÅÂÊÉÁ±Ü¹¥»÷
@@ -53,25 +59,40 @@ public class Character_Health : MonoBehaviour , IDamage
         float resistance = stats.GetElementResistance(element);
         float finalElementDamage = elementDamage * (1 - resistance);
 
-        TakeKnockback(duration, damageSource, PhysicalDamage);
-        ReduceHp(PhysicalDamage + finalElementDamage);
+        TakeKnockback(damageSource, PhysicalDamage);
+        ReduceHealth(PhysicalDamage + finalElementDamage);
     }
 
-    private void TakeKnockback(float duration, Transform damageSource, float finalDamage)
+    //»Ö¸´ÑªÁ¿
+    public void RegenHealth()
     {
-        Vector2 knockback = CalculateKnockback(finalDamage, damageSource);
-        character?.Knockback(knockback, duration);
+        if (!canRegenHealth)
+            return;
+
+        float regenAmount = stats.resources.healthRegen.GetValue();
+        IncreaseHealth(regenAmount);
     }
 
+    public void IncreaseHealth(float healAmount)
+    {
+        if(isDead)
+            return;
+
+        float newHealth = currentHealth + healAmount;
+        float maxHealth = stats.GetMaxHealth();
+
+        currentHealth = Mathf.Min(newHealth, maxHealth);
+        UpdateHealthBar();
+    }
 
     //ÑªÁ¿¼õÉÙ
-    public void ReduceHp(float damage)
+    public void ReduceHealth(float damage)
     {
         vfx?.PlayOnDamageVfx();
-        currentHp -= damage;
+        currentHealth -= damage;
         UpdateHealthBar();
 
-        if (currentHp <= 0)
+        if (currentHealth <= 0)
             Die();
     }
    
@@ -87,7 +108,16 @@ public class Character_Health : MonoBehaviour , IDamage
         if (healthBar == null)
             return;
 
-        healthBar.value = currentHp / stats.GetMaxHealth();
+        healthBar.value = currentHealth / stats.GetMaxHealth();
+    }
+
+    //ÊµÏÖ»÷ÍË
+    private void TakeKnockback(Transform damageSource, float finalDamage)
+    {
+        Vector2 knockback = CalculateKnockback(finalDamage, damageSource);
+        float duration = CalculateDuration(finalDamage);
+
+        character?.Knockback(knockback, duration);
     }
 
     //¼ÆËã»÷ÍËÊôÐÔ

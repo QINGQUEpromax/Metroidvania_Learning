@@ -20,9 +20,9 @@ public class PlayerAttack : PlayerState
     public override void Enter()
     {
         base.Enter();
-
         attackQueued = false;
         ResetAttack();
+        SyncAttackSpeed();
 
         attackDir = player.moveInput.x != 0 ? (int)player.moveInput.x : player.facingDir;
 
