@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class Stats_System : MonoBehaviour
 {
+    public Stats_SetupSO defaultStatSetup;
+
     public Stats_ResourceGroup resources;
-    public Stats_MajorGroup major;
     public Stats_OffenseGroup offense;
     public Stats_DefenseGroup defense;
-    public Stat maxHp;
+    public Stats_MajorGroup major;
 
 
-    public float GetElementDamage(out ElementType element,float scaleFactor = 1f)
+    public float GetElementDamage(out ElementType element, float scaleFactor = 1f)
     {
         float fireDamage = offense.fireDamage.GetValue();
         float iceDamage = offense.iceDamage.GetValue();
@@ -64,7 +65,7 @@ public class Stats_System : MonoBehaviour
         return finalResistance;
     }
 
-    public float GetPhysicalDamage(out bool isCrit,float scaleFactor = 1f)
+    public float GetPhysicalDamage(out bool isCrit, float scaleFactor = 1f)
     {
         float baseDamage = offense.damage.GetValue();
         float bonusDamage = major.strength.GetValue();
@@ -130,5 +131,69 @@ public class Stats_System : MonoBehaviour
         float finalEvasion = Mathf.Clamp(totalEvasion, 0, evasionCap);
 
         return finalEvasion;
+    }
+    public Stat GetStatByType(StatType type)
+    {
+        switch (type)
+        {
+            case StatType.MaxHealth: return resources.maxHealth;
+            case StatType.HealthRegen: return resources.healthRegen;
+            case StatType.Strength: return major.strength;
+            case StatType.Agility: return major.agility;
+            case StatType.Intelligence: return major.intelligence;
+            case StatType.Vitality: return major.vitality;
+            case StatType.AttackSpeed: return offense.attackSpeed;
+            case StatType.Damage: return offense.damage;
+            case StatType.CritChance: return offense.critChance;
+            case StatType.CritPower: return offense.critPower;
+            case StatType.ArmorReduction: return offense.armorReduction;
+            case StatType.FireDamage: return offense.fireDamage;
+            case StatType.IceDamage: return offense.iceDamage;
+            case StatType.LightningDamage: return offense.lightningDamage;
+            case StatType.Armor: return defense.armor;
+            case StatType.Evasion: return defense.evasion;
+            case StatType.IceResistance: return defense.iceRes;
+            case StatType.FireResistance: return defense.fireRes;
+            case StatType.LightningResistance: return defense.lightningRes;
+
+            default:
+                Debug.LogWarning($"statType {type} not implemented yet.");
+                return null;
+        }
+    }
+
+    [ContextMenu("Update Default Stat Setup")]
+    public void ApplyDefaultStatSetup()
+    {
+        if (defaultStatSetup == null)
+        {
+            Debug.Log("No default stat setup assigned");
+            return;
+        }
+
+        resources.maxHealth.SetBaseValue(defaultStatSetup.maxHealth);
+        resources.healthRegen.SetBaseValue(defaultStatSetup.healthRegen);
+
+        major.strength.SetBaseValue(defaultStatSetup.strength);
+        major.agility.SetBaseValue(defaultStatSetup.agility);
+        major.intelligence.SetBaseValue(defaultStatSetup.intelligence);
+        major.vitality.SetBaseValue(defaultStatSetup.vitality);
+
+        offense.attackSpeed.SetBaseValue(defaultStatSetup.attackspeed);
+        offense.damage.SetBaseValue(defaultStatSetup.damage);
+        offense.critChance.SetBaseValue(defaultStatSetup.critchance);
+        offense.critPower.SetBaseValue(defaultStatSetup.critPower);
+        offense.armorReduction.SetBaseValue(defaultStatSetup.armorReduction);
+
+        offense.iceDamage.SetBaseValue(defaultStatSetup.iceDamage);
+        offense.fireDamage.SetBaseValue(defaultStatSetup.fireDamage);
+        offense.lightningDamage.SetBaseValue(defaultStatSetup.lightningDamage);
+
+        defense.armor.SetBaseValue(defaultStatSetup.armor);
+        defense.evasion.SetBaseValue(defaultStatSetup.evasion);
+
+        defense.iceRes.SetBaseValue(defaultStatSetup.iceResistance);
+        defense.fireRes.SetBaseValue(defaultStatSetup.fireResistance);
+        defense.lightningRes.SetBaseValue(defaultStatSetup.lightningResistance);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Character_Health : MonoBehaviour , IDamage
+public class Character_Health : MonoBehaviour , IDamagable
 {
     private Slider healthBar;
     private Character_VFX vfx;
@@ -21,7 +21,7 @@ public class Character_Health : MonoBehaviour , IDamage
     [Header("受伤击退")]
     [SerializeField] private Vector2 knockbackPower;
     [SerializeField] private Vector2 heavyknockbackPower;//重击
-    [SerializeField] protected float knockbackDuration;
+    public float knockbackDuration;
     [SerializeField] protected float heavyknockbackDuration;
 
     [Header("受到重击")]

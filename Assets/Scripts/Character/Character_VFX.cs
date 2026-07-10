@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Character_VFX : MonoBehaviour
 {
-    private SpriteRenderer sr;
-    private Character character;
+    protected SpriteRenderer sr;
+    protected Character character;
+
 
     [Header("受伤特效")]
     [SerializeField] private Material onDamageMaterial;
@@ -32,7 +33,11 @@ public class Character_VFX : MonoBehaviour
         character = GetComponent<Character>();
         originalMaterial = sr.material;
     }
+    
+    protected virtual void Start()
+    {
 
+    }
     //元素伤害特效
     public void PlayOnStatusVfx(float duration, ElementType element)
     {
@@ -124,4 +129,6 @@ public class Character_VFX : MonoBehaviour
         yield return new WaitForSeconds(onDamageVfxDuration);
         sr.material = originalMaterial;
     }
+
+  
 }
