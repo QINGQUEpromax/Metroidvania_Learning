@@ -12,7 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962c5e451a91618429f70af07ffc0e46, type: 3}
   m_Name: Skill Data - Timeless Attack
   m_EditorClassIdentifier: 
-  cost: 2
   displayName: Timeless Attack
   description: The Time echo can perform 1 attack
   icon: {fileID: 452752024, guid: 7ae0115109b4a6f42a4f7ad59397d09b, type: 3}
+  cost: 2
+  unlockedByDefault: 0
+  skillType: 1
+  upgradeData:
+    upgradeType: 16
+    cooldown: 3
+    damageScaleData:
+      phyiscal: 1
+      elemental: 1
+      chillDuration: 3
+      chillslowMulitplier: 0.2
+      burnDuration: 3
+      burnDamageScale: 1
+      shockDuration: 3
+      shockDamageScale: 1
+      shockCharge: 0.4

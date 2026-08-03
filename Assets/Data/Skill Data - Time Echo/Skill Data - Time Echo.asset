@@ -12,7 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962c5e451a91618429f70af07ffc0e46, type: 3}
   m_Name: Skill Data - Time Echo
   m_EditorClassIdentifier: 
-  cost: 1
   displayName: Time Echp
   description: Create a temporal echo of your own;.The echo will distract your enemies.
   icon: {fileID: -7293604, guid: 7ae0115109b4a6f42a4f7ad59397d09b, type: 3}
+  cost: 1
+  unlockedByDefault: 0
+  skillType: 1
+  upgradeData:
+    upgradeType: 15
+    cooldown: 3
+    damageScaleData:
+      phyiscal: 1
+      elemental: 1
+      chillDuration: 3
+      chillslowMulitplier: 0.2
+      burnDuration: 3
+      burnDamageScale: 1
+      shockDuration: 3
+      shockDamageScale: 1
+      shockCharge: 0.4

@@ -4,25 +4,42 @@ using UnityEngine;
 
 public class Skill_Base : MonoBehaviour
 {
+    public Player_SkillManager skillManager { get; private set; }
+    public Player player {  get; private set; }
+    public DamageScaleData damageScaleData {  get; private set; }
+
     [Header("Í¨ÓÃÂß¼­")]
     [SerializeField] protected SkillType skillType;
     [SerializeField] protected SkillUpgradeType upgradeType;
-    [SerializeField] private float cooldown;
+    [SerializeField] protected float cooldown;
     private float lastTimeUsed;
 
     protected virtual void Awake()
     {
+        skillManager = GetComponentInParent<Player_SkillManager>();
         lastTimeUsed = lastTimeUsed - cooldown;
+        player = GetComponentInParent<Player>();
+        damageScaleData = new DamageScaleData();
     }
+
+    public virtual void TryUseSkill()
+    {
+
+    } 
 
     public void SetSkillUpgrade(UpgradeData upgrade)
     {
         upgradeType = upgrade.upgradeType;
         cooldown = upgrade.cooldown;
+        damageScaleData = upgrade.damageScaleData;
+        ResetCooldown();
     }
 
-    public bool CanUseSkill()
+    public virtual bool CanUseSkill()
     {
+        if(upgradeType == SkillUpgradeType.None)
+            return false;
+
         if (OnCooldown())
             return false;
 
@@ -31,8 +48,8 @@ public class Skill_Base : MonoBehaviour
 
     protected bool Unlocked(SkillUpgradeType upgradeToCheck) => upgradeType == upgradeToCheck;
 
-    private bool OnCooldown() => Time.time < lastTimeUsed + cooldown;
+    public bool OnCooldown() => Time.time < lastTimeUsed + cooldown;
     public void SetSkillOnCooldown() => lastTimeUsed = Time.time;
-    public void ResetCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;
-    public void ResetCooldown() => lastTimeUsed = Time.time;
+    public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;
+    public void ResetCooldown() => lastTimeUsed = Time.time - cooldown;
 }

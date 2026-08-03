@@ -23,7 +23,7 @@ public class EnemyMove : EnemyGround
     {
         base.Update();
 
-        enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir,rb.velocity.y);
+        enemy.SetVelocity(enemy.GetMoveSpeed() * enemy.facingDir,rb.velocity.y);
         if (!enemy.haveRoadAhead || enemy.isOnWall)
         {
             stateMachine.ChangeState(enemy.idleState);

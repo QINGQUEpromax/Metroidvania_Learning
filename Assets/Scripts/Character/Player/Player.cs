@@ -10,6 +10,8 @@ public class Player : Character
     public InputActions inputActions { get; private set; }
     public Player_SkillManager skillManager { get; private set; }
     public Player_VFX vfx { get; private set; }
+    public Character_Health health { get; private set; }
+    public Entity_StatusHandler statusHandler { get; private set; }
 
 
     #region 角色状态变量声明
@@ -24,24 +26,30 @@ public class Player : Character
     public PlayerJumpAttack jumpAttackState { get; private set; }
     public PlayerDie dieState { get; private set; }
     public PlayerCounter counterState { get; private set; }
+    public PlayerSwordThrow swordThrowState { get; private set; }
+    public Player_DomainExpansion domainExpansionState { get; private set; }
     public Vector2 moveInput { get; private set; }
+    public Vector2 mousePosition { get; private set; }
     #endregion
 
-    [Header("移动跳跃")]
+    [Header("Move and Jump")]
     public float moveSpeed;
     public float jumpForce;
     [Range(0, 1)]
     public float inAirSpeed;//空中速度乘数
     [Range(0, 1)]
     public float OnWallSpeed;//挂墙速度乘数
-
     private Coroutine queueAttackCo;
 
-    [Header("冲刺")]
+    [Header("Ultimate ability details")]
+    public float riseSpeed = 25;
+    public float riseMaxDistance = 3;
+
+    [Header("Dash details")]
     public float dashDuration;
     public float dashSpeed;
 
-    [Header("攻击")]
+    [Header("Attack details")]
     public Vector2[] attackForce;
     public Vector2 jumpAttackForce;
     public float attackDuration;
@@ -52,10 +60,13 @@ public class Player : Character
         base.Awake();
 
         ui = FindAnyObjectByType<UI>();
-        inputActions = new InputActions();
         skillManager = GetComponent<Player_SkillManager>();
         vfx = GetComponent<Player_VFX>();
+        health = GetComponent<Character_Health>();
+        statusHandler = GetComponent<Entity_StatusHandler>();
 
+        inputActions = new InputActions();
+       
         idleState = new PlayerIdle(this, stateMachine, "idle");
         moveState = new PlayerMove(this, stateMachine, "move");
         jumpState = new PlayerJump(this, stateMachine, "jumpFall");
@@ -67,6 +78,8 @@ public class Player : Character
         jumpAttackState = new PlayerJumpAttack(this, stateMachine, "jumpAttack");
         dieState = new PlayerDie(this, stateMachine, "die");
         counterState = new PlayerCounter(this, stateMachine, "counter");
+        swordThrowState = new PlayerSwordThrow(this, stateMachine, "swordThrow");
+        domainExpansionState = new Player_DomainExpansion(this, stateMachine, "jumpFall");
     }
 
     protected override void Start()
@@ -74,6 +87,10 @@ public class Player : Character
         base.Start();
         stateMachine.initialize(idleState);
     }
+
+    //传送玩家
+    public void TeleportPlayer(Vector3 destination) => transform.position = destination;
+
     protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
         float originalMoveSpeed = moveSpeed;
@@ -136,11 +153,15 @@ public class Player : Character
     private void OnEnable()
     {
         inputActions.Enable();
+
+        inputActions.Player.Mouse.performed += ctx => mousePosition = ctx.ReadValue<Vector2>();
+
         inputActions.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         inputActions.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
         inputActions.Player.ToggleSkillTreeUI.performed += ctx => ui.ToggleSkillTreeUI();
-        inputActions.Player.Spell.performed += ctx => Player_SkillManager.instance.shard.CreateShard();
+        inputActions.Player.Spell.performed += ctx => Player_SkillManager.instance.shard.TryUseSkill();
+        inputActions.Player.Spell.performed += ctx => Player_SkillManager.instance.timeEcho.TryUseSkill();
     }
 
     private void OnDisable()

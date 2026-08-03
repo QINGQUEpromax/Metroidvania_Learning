@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Combat_System : MonoBehaviour
@@ -8,7 +5,7 @@ public class Combat_System : MonoBehaviour
     private Character character => GetComponent<Character>();
     private Character_Health health => GetComponent<Character_Health>();
     private Stats_System stats => GetComponent<Stats_System>();
-    public float damage = 10;
+    public DamageScaleData basicAttackScale;
 
     [Header("Ä¿±ê¼ì²â")]
     public Transform attackCenter;
@@ -24,25 +21,25 @@ public class Combat_System : MonoBehaviour
     [SerializeField] private float lightningScale = 2.5f;
 
 
-    public bool attackIsEvaded {  get; private set; }
-    
+    public bool attackIsEvaded { get; private set; }
+
     protected virtual void Update()
     {
-       
+
     }
 
-        
+
 
     public void PerformAttack()
     {
-        foreach(var target in GetTargetCollider())
+        foreach (var target in GetTargetCollider())
         {
             IDamagable damagable = target.GetComponent<IDamagable>();
             if (damagable == null)
                 continue;
 
             if (target.gameObject.GetComponent<Character_Health>() != null)
-            {   
+            {
                 attackIsEvaded = target.gameObject.GetComponent<Character_Health>().AttackEvaded();
             }
             else
@@ -53,52 +50,25 @@ public class Combat_System : MonoBehaviour
             if (attackIsEvaded)
                 continue;
 
+            ElementalEffectData effectData = new ElementalEffectData(stats, basicAttackScale);
+
             float elementDamage = stats.GetElementDamage(out ElementType element);
             float damage = stats.GetPhysicalDamage(out bool isCrit);
-            damagable?.TakeDamage(damage, elementDamage,element, health.CalculateDuration(damage), transform);
+            damagable?.TakeDamage(damage, elementDamage, element, health.CalculateDuration(damage), transform);
 
-            if(element != ElementType.None)
+            if (element != ElementType.None && target.GetComponent<Character>() != null)
+                target.GetComponent<Entity_StatusHandler>().ApplyStatusEffect(element, effectData);
+
+            if (target.gameObject.GetComponent<Character_VFX>() != null)
             {
-                ApplyStatusEffect(target.transform, element);
+                target.gameObject.GetComponent<Character_VFX>().CreateHitVfx(isCrit,element);
             }
 
-            if(target.gameObject.GetComponent<Character_VFX>() != null)
-            {
-            target.gameObject.GetComponent<Character_VFX>().UpdateHitColor(element);
-            target.gameObject.GetComponent<Character_VFX>().CreateHitVfx(isCrit);
-            }
-            
         }
     }
 
-    public void ApplyStatusEffect(Transform target,ElementType element,float scaleFactor = 1f)
-    {
-        Entity_StatusHandler statusHandler = target.GetComponent<Entity_StatusHandler>();
 
-        if (statusHandler == null) 
-            return;
 
-        if (element == ElementType.Ice && statusHandler.CanBeApplied(ElementType.Ice))
-        {
-            statusHandler.ApplyChillEffect(defaultDuration, chillslowMultipier);
-        }
-        
-        if (element == ElementType.Fire && statusHandler.CanBeApplied(ElementType.Fire))
-        {
-            scaleFactor = fireScale;
-            float fireDamage = stats.offense.fireDamage.GetValue() * scaleFactor;
-            statusHandler.ApplyBurnEffect(defaultDuration, fireDamage);
-        }
-
-        if(element == ElementType.Lightning && statusHandler.CanBeApplied(ElementType.Lightning))
-        {
-            scaleFactor = lightningScale;
-            float lightningDamage = stats.offense.lightningDamage.GetValue() * scaleFactor;
-            statusHandler.ApplyElectrifyEffect(defaultDuration, lightningDamage,electrifyChargeBuildUp);
-        }
-
-    }
-    
     protected Collider2D[] GetTargetCollider()
     {
         return Physics2D.OverlapCircleAll(attackCenter.position, attackRadius, attackTarget);
@@ -115,5 +85,5 @@ public class Combat_System : MonoBehaviour
         character.stateMachine.currentState.attackOver = true;
     }
 
-    
+
 }

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1134079585
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1132009226, guid: 0c84746cfe3db75489f022051bbc6b87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,11 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59429ab006732e47b6a65f4db40ea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHitVfx: {fileID: 6094240446930637468, guid: f0d92c4afed2f38468d27c579ee3a5f5, type: 3}
   enmeyLayer:
     serializedVersion: 2
     m_Bits: 512
   targetCheck: {fileID: 2671297089231032743}
-  checkRadius: 1
+  checkRadius: 1.5
   vfxPrefab: {fileID: 3221024308803738743, guid: fd18613b2da1f704fa56f97ac020b0b9, type: 3}
 --- !u!95 &7210491652782920560
 Animator:

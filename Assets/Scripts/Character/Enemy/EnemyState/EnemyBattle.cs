@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBattle : EnemyState
 {
     private Transform player;
+    private Transform lastTarget;
     private float lastBattleTime;
 
     public EnemyBattle(Enemy enemy, StateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
@@ -24,7 +23,7 @@ public class EnemyBattle : EnemyState
 
         if (ShouldRetreat())
         {
-            rb.velocity = new Vector2(enemy.retreatVelocity.x * -DirectionToPlayer(), enemy.retreatVelocity.y);
+            rb.velocity = new Vector2((enemy.retreatVelocity.x * enemy.activeSlowMultiplier) * -DirectionToPlayer(), enemy.retreatVelocity.y);
             enemy.HandleFlip(DirectionToPlayer());
         }
     }
@@ -34,7 +33,10 @@ public class EnemyBattle : EnemyState
         base.Update();
 
         if (enemy.PlayerDetection())
+        {
+            UpdateTargetIfNeeded();
             UpdateBatteTimer();
+        }
 
         if (BattleTimeIsOver())
             stateMachine.ChangeState(enemy.idleState);
@@ -45,7 +47,21 @@ public class EnemyBattle : EnemyState
         }
         else
         {
-            enemy.SetVelocity(DirectionToPlayer() * enemy.battleMoveSpeed, rb.velocity.y);
+            enemy.SetVelocity(DirectionToPlayer() * enemy.GetBattleMoveSpeed(), rb.velocity.y);
+        }
+    }
+
+    private void UpdateTargetIfNeeded()
+    {
+        if (enemy.PlayerDetection() == false)
+            return;
+
+        Transform newTarget = enemy.PlayerDetection().transform;
+
+        if (newTarget != lastTarget)
+        {
+            lastTarget = newTarget;
+            player = newTarget;
         }
     }
 

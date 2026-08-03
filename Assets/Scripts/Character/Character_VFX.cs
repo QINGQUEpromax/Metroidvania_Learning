@@ -23,17 +23,17 @@ public class Character_VFX : MonoBehaviour
     [Header("受到元素攻击特效")]
     [SerializeField] private Color chillVfx = Color.cyan;
     [SerializeField] private Color burnVfx = Color.red;
-    [SerializeField] private Color electrifyVfx = Color.yellow;
+    [SerializeField] private Color shockVfx = Color.yellow;
     private Color originalColor;
     private Color hitVfxColor;
-    
+
     protected virtual void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         character = GetComponent<Character>();
         originalMaterial = sr.material;
     }
-    
+
     protected virtual void Start()
     {
 
@@ -46,7 +46,7 @@ public class Character_VFX : MonoBehaviour
         if (element == ElementType.Fire)
             StartCoroutine(PlayStatusVfxCo(duration, burnVfx));
         if (element == ElementType.Lightning)
-            StartCoroutine(PlayStatusVfxCo(duration, electrifyVfx));
+            StartCoroutine(PlayStatusVfxCo(duration, shockVfx));
     }
 
     public void StopAllVfx()
@@ -65,7 +65,7 @@ public class Character_VFX : MonoBehaviour
         Color darkColor = effectColor * .9f;
         bool toggle = false;
 
-        while(timer < duration)
+        while (timer < duration)
         {
             sr.color = toggle ? lightColor : darkColor;
             toggle = !toggle;
@@ -79,7 +79,7 @@ public class Character_VFX : MonoBehaviour
     }
 
     //生成打击特效
-    public void CreateHitVfx(bool isCrit)
+    public void CreateHitVfx(bool isCrit, ElementType element)
     {
         if (hitVfx == null || onCritHitVfx == null)
             return;
@@ -90,26 +90,26 @@ public class Character_VFX : MonoBehaviour
         GameObject vfx = Instantiate(hitPrefab, vfxCreatedPos.position + offsetPos, Quaternion.identity);
 
         originalColor = vfx.GetComponent<SpriteRenderer>().color;
-        vfx.GetComponent<SpriteRenderer>().color = hitVfxColor != default ? hitVfxColor : originalColor;
+        vfx.GetComponent<SpriteRenderer>().color = hitVfxColor != default ? GetElementColor(element) : originalColor;
 
         if (character.facingDir == -1 && isCrit)
             vfx.transform.Rotate(0, 180, 0);
     }
 
     //元素特效
-    public void UpdateHitColor(ElementType element)
+    public Color GetElementColor(ElementType element)
     {
         switch (element)
         {
-            case ElementType.None:
-                hitVfxColor = default;
-                break;
-            case ElementType.Fire:
-                hitVfxColor = burnVfx;           
-                break;
             case ElementType.Ice:
-                hitVfxColor = chillVfx;
-                break;
+                return chillVfx;
+            case ElementType.Fire:
+                return
+                burnVfx;
+            case ElementType.Lightning:
+                return shockVfx;
+            default:
+                return Color.white;
         }
     }
 
@@ -130,5 +130,5 @@ public class Character_VFX : MonoBehaviour
         sr.material = originalMaterial;
     }
 
-  
+
 }

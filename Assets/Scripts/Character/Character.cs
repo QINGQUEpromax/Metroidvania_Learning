@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
-using Unity.VisualScripting;
+using System.Collections;
+using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
@@ -46,10 +44,10 @@ public abstract class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<Stats_System>();
         stateMachine = new StateMachine();
-        
+
     }
 
-   protected virtual void Start()
+    protected virtual void Start()
     {
 
     }
@@ -61,22 +59,22 @@ public abstract class Character : MonoBehaviour
     }
 
 
-   //受伤击退协程
-   public void Knockback(Vector2 knockback, float knockbackDuration)
+    //受伤击退协程
+    public void Knockback(Vector2 knockback, float knockbackDuration)
     {
-        if(knockbackCo != null)
+        if (knockbackCo != null)
             StopCoroutine(knockbackCo);
 
-        knockbackCo = StartCoroutine(KnockbackCo( knockback,knockbackDuration));
+        knockbackCo = StartCoroutine(KnockbackCo(knockback, knockbackDuration));
     }
 
-   private IEnumerator KnockbackCo(Vector2 knockback,float knockbackDuration)
+    private IEnumerator KnockbackCo(Vector2 knockback, float knockbackDuration)
     {
         isKnockback = true;
         rb.velocity = knockback;
 
         yield return new WaitForSeconds(knockbackDuration);
-        
+
         rb.velocity = Vector2.zero;
         isKnockback = false;
     }
@@ -119,17 +117,27 @@ public abstract class Character : MonoBehaviour
     }
 
     //减缓对方速度
-    public virtual void SlowDownEntity(float duration,float slowMultiplier)
+    public virtual void SlowDownEntity(float duration, float slowMultiplier, bool canOverrideSlowEffect = false)
     {
         if (slowDownCo != null)
-            StopCoroutine(slowDownCo);
+        {
+            if (canOverrideSlowEffect)
+                StopCoroutine(slowDownCo);
+            else
+                return;
+        }
 
         slowDownCo = StartCoroutine(SlowDownEntityCo(duration, slowMultiplier));
     }
 
-    protected virtual IEnumerator SlowDownEntityCo(float duration,float slowMultiplier)
+    protected virtual IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
         yield return null;
+    }
+
+    public virtual void StopSlowDown()
+    {
+        slowDownCo = null;
     }
 
     //接地检测
@@ -147,7 +155,7 @@ public abstract class Character : MonoBehaviour
         {
             isOnWall = Physics2D.Raycast(firstDetectRay.position, Vector2.right * facingDir, wallDetectDistance, groundLayer);
         }
-        
+
     }
 
     //绘图
@@ -158,7 +166,7 @@ public abstract class Character : MonoBehaviour
         {
             Gizmos.DrawLine(secondDetectRay.position, secondDetectRay.position + new Vector3(facingDir * wallDetectDistance, 0, 0));
         }
-        
+
         Vector2 pos = transform.position;
         Gizmos.DrawWireSphere(pos + offset, groundDetectRadius);
     }

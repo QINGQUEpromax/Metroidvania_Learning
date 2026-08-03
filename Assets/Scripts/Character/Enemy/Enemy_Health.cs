@@ -7,6 +7,9 @@ public class Enemy_Health : Character_Health
     private Enemy enemy => GetComponent<Enemy>();
     public override void TakeDamage(float damage,float elementDamage,ElementType element, float duration,Transform damageSource)
     {
+        if (canTakeDamage == false)
+            return;
+
         base.TakeDamage(damage,elementDamage,element,duration,damageSource);
 
         if (isDead)

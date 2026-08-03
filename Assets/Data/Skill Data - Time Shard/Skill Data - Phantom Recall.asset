@@ -10,10 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 962c5e451a91618429f70af07ffc0e46, type: 3}
-  m_Name: Skill Data - Cleanse
+  m_Name: Skill Data - Phantom Recall
   m_EditorClassIdentifier: 
-  cost: 3
-  displayName: Cleanse
-  description: The healing wisp reduces the duration of negative status effects by
-    1 second.
-  icon: {fileID: 1893721086, guid: 7ae0115109b4a6f42a4f7ad59397d09b, type: 3}
+  cost: 2
+  unlockedByDefault: 0
+  skillType: 2
+  upgradeData:
+    upgradeType: 9
+    cooldown: 2
+  displayName: Phantom Recall
+  description: 'Press skill button again, to change places with shard you
+
+    created.'
+  icon: {fileID: -195789106, guid: 7ae0115109b4a6f42a4f7ad59397d09b, type: 3}

@@ -33,6 +33,14 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         connectHandler = GetComponent<UI_TreeConnectionHandler>();
 
         UpdateIconColor(GetColorByHex(lockedColorHex));
+
+    }
+
+    private void Start()
+    {
+        if (skillData.unlockedByDefault)
+            UnLock();
+        
     }
 
     //返还技能点
@@ -85,6 +93,17 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         foreach(var node in conflictNodes)
         {
             node.isLocked = true;
+            node.LockChildNodes();
+        }
+    }
+
+    private void LockChildNodes()
+    {
+        isLocked = true;
+
+        foreach(var node in connectHandler.GetChildNodes())
+        {
+            node.LockChildNodes();
         }
     }
 

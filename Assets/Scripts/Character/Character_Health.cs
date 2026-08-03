@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Character_Health : MonoBehaviour , IDamagable
+public class Character_Health : MonoBehaviour, IDamagable
 {
     private Slider healthBar;
     private Character_VFX vfx;
@@ -12,11 +10,13 @@ public class Character_Health : MonoBehaviour , IDamagable
 
     [Header("ÑªÁ¿½¡¿µ")]
     [SerializeField] protected float currentHealth;
-    [SerializeField] protected bool isDead;
 
     [Header("ÑªÁ¿»Ø¸´")]
     [SerializeField] private float regenInterval = 1;
     [SerializeField] private bool canRegenHealth = true;
+    public float lastDamageTaken {  get; private set; }
+    public bool isDead {  get; private set; }
+    protected bool canTakeDamage = true;
 
     [Header("ÊÜÉË»÷ÍË")]
     [SerializeField] private Vector2 knockbackPower;
@@ -34,34 +34,51 @@ public class Character_Health : MonoBehaviour , IDamagable
         healthBar = GetComponentInChildren<Slider>();
         stats = GetComponentInChildren<Stats_System>();
 
+        SetupHealth();
+    }
+
+    private void SetupHealth()
+    {
+        if (stats == null)
+            return;
+
         currentHealth = stats.GetMaxHealth();
         UpdateHealthBar();
 
-        InvokeRepeating(nameof(RegenHealth),0, regenInterval);
+        InvokeRepeating(nameof(RegenHealth), 0, regenInterval);
     }
 
     //¸ÅÂÊÉÁ±Ü¹¥»÷
-    public bool AttackEvaded() => Random.Range(0, 100) < stats.GetEvasion();
-
+    public bool AttackEvaded()
+    {
+        if (stats == null)
+            return false;
+        else
+            return Random.Range(0, 100) < stats.GetEvasion();
+    }
 
     //ÊÜÉËÂß¼­
-    public virtual void TakeDamage(float damage,float elementDamage,ElementType element, float duration,Transform damageSource)
+    public virtual void TakeDamage(float damage, float elementDamage, ElementType element, float duration, Transform damageSource)
     {
-        if (isDead)
+        if (isDead || canTakeDamage == false)
             return;
 
         Stats_System attackerStats = damageSource.GetComponent<Stats_System>();
         float armorReduction = attackerStats != null ? attackerStats.GetArmorReduction() : 0;
 
-        float mitigation = stats.GetArmorMitigation(armorReduction);
+        float mitigation = stats != null ? stats.GetArmorMitigation(armorReduction) : 0;
         float PhysicalDamage = damage * (1 - mitigation);
 
-        float resistance = stats.GetElementResistance(element);
+        float resistance = stats != null ? stats.GetElementResistance(element) : 0;
         float finalElementDamage = elementDamage * (1 - resistance);
 
         TakeKnockback(damageSource, PhysicalDamage);
         ReduceHealth(PhysicalDamage + finalElementDamage);
+
+        lastDamageTaken = PhysicalDamage + finalElementDamage;
     }
+
+    public void SetCanTakeDamage(bool canTakeDamage) => this.canTakeDamage = canTakeDamage;
 
     //»Ö¸´ÑªÁ¿
     public void RegenHealth()
@@ -75,7 +92,7 @@ public class Character_Health : MonoBehaviour , IDamagable
 
     public void IncreaseHealth(float healAmount)
     {
-        if(isDead)
+        if (isDead)
             return;
 
         float newHealth = currentHealth + healAmount;
@@ -95,13 +112,22 @@ public class Character_Health : MonoBehaviour , IDamagable
         if (currentHealth <= 0)
             Die();
     }
-   
+
     //ËÀÍö
-    private void Die() {
+    protected virtual void Die()
+    {
         isDead = true;
         character.CharacterDeath();
     }
-    
+
+    public float GetHealthPercent() => currentHealth / stats.GetMaxHealth();
+    public void SetHealthToPercent(float percent)
+    {
+        currentHealth = stats.GetMaxHealth() * Mathf.Clamp01(percent);
+        UpdateHealthBar();
+
+    }
+
     //¸üÐÂÑªÌõ
     private void UpdateHealthBar()
     {
@@ -121,7 +147,7 @@ public class Character_Health : MonoBehaviour , IDamagable
     }
 
     //¼ÆËã»÷ÍËÊôÐÔ
-    private Vector2 CalculateKnockback(float damage,Transform damageSource)
+    private Vector2 CalculateKnockback(float damage, Transform damageSource)
     {
         int direction = transform.position.x > damageSource.position.x ? 1 : -1;
 
@@ -131,7 +157,19 @@ public class Character_Health : MonoBehaviour , IDamagable
         return knockback;
     }
 
-    public float CalculateDuration(float damage) => damage / stats.GetMaxHealth() >= heavyDamageThreshold ? heavyknockbackDuration : knockbackDuration;
-    private bool IsHeavyDamage(float damage) => damage / stats.GetMaxHealth() >= heavyDamageThreshold;
+    public float CalculateDuration(float damage)
+    {
+        if (stats == null)
+            return 0;
+        else
+            return damage / stats.GetMaxHealth() >= heavyDamageThreshold ? heavyknockbackDuration : knockbackDuration;
+    }
+    private bool IsHeavyDamage(float damage)
+    {
+        if (stats == null)
+            return false;
+        else
+            return damage / stats.GetMaxHealth() >= heavyDamageThreshold;
+    }
 
 }

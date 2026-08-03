@@ -11,6 +11,7 @@ public class UI_SkillToolTip : UI_ToolTip
 
     [SerializeField] private TextMeshProUGUI skillName;
     [SerializeField] private TextMeshProUGUI skillDescription;
+    [SerializeField] private TextMeshProUGUI skillCooldown;
     [SerializeField] private TextMeshProUGUI skillRequirements;
 
     [Space]
@@ -43,6 +44,7 @@ public class UI_SkillToolTip : UI_ToolTip
 
         skillName.text = node.skillData.displayName;
         skillDescription.text = node.skillData.description;
+        skillCooldown.text = "Cooldown: " + node.skillData.upgradeData.cooldown + "s.";
 
         string skillLockedText = $"<color={importantInfoHex}>{lockedSkillText} </color>";
         string requirements = node.isLocked ? skillLockedText : GetRequirement(node.skillData.cost, node.neededNodes, node.conflictNodes);
@@ -82,6 +84,8 @@ public class UI_SkillToolTip : UI_ToolTip
 
         foreach(var node in neededNodes)
         {
+            if(node == null) continue;
+
             string nodeColor = node.isUnlocked ? metConditionHex : notMetConditionHex;
             sb.AppendLine($"<color={nodeColor}>- {node.skillData.displayName} </color>");
 
@@ -92,6 +96,7 @@ public class UI_SkillToolTip : UI_ToolTip
 
         foreach(var node in conflictNodes)
         {
+            if (node == null) continue;
             sb.AppendLine($"<color={importantInfoHex}>- {node.skillData.displayName} </color>");
         }
 

@@ -21,6 +21,8 @@ public class PlayerDash : PlayerState
         stateTimer = player.dashDuration;
         originGravitScale = rb.gravityScale;
         rb.gravityScale = 0;
+
+        player.health.SetCanTakeDamage(false);
     }
 
     public override void Update()
@@ -42,6 +44,7 @@ public class PlayerDash : PlayerState
         base.Exit();
         Player_SkillManager.instance.dash.OnEndEffect();
 
+        player.health.SetCanTakeDamage(true);
         player.SetVelocity(0, 0);
         rb.gravityScale = originGravitScale;
     }

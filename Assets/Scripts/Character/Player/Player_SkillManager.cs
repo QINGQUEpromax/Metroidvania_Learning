@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class Player_SkillManager : MonoBehaviour
 {
-    public static Player_SkillManager instance {  get; private set; }
+    public static Player_SkillManager instance { get; private set; }
 
     public Skill_Dash dash { get; private set; }
     public Skill_Shard shard { get; private set; }
+    public Skill_SwordThrow swordThrow { get; private set; }
+    public Skill_TimeEcho timeEcho { get; private set; }
+    public Skill_DomainExpansion domainExpansion { get; private set; }
+
+    private Skill_Base[] allSkills;
 
     private void Awake()
     {
@@ -19,6 +24,17 @@ public class Player_SkillManager : MonoBehaviour
 
         dash = GetComponentInChildren<Skill_Dash>();
         shard = GetComponentInChildren<Skill_Shard>();
+        swordThrow = GetComponentInChildren<Skill_SwordThrow>();
+        timeEcho = GetComponentInChildren<Skill_TimeEcho>();
+        domainExpansion = GetComponentInChildren<Skill_DomainExpansion>();
+
+        allSkills = GetComponentsInChildren<Skill_Base>();
+    }
+
+    public void ReduceAllskillcooldownBy(float amount)
+    {
+        foreach (var skill in allSkills)
+            skill.ReduceCooldownBy(amount);
     }
 
     public Skill_Base GetSkillByType(SkillType type)
@@ -26,6 +42,10 @@ public class Player_SkillManager : MonoBehaviour
         switch (type)
         {
             case SkillType.Dash: return dash;
+            case SkillType.TimeShard: return shard;
+            case SkillType.SwordThrow: return swordThrow;
+            case SkillType.TimeEcho: return timeEcho;
+            case SkillType.DominExpansion: return domainExpansion;
 
             default:
                 Debug.Log($"skill type {type} is not supported.");
@@ -35,7 +55,7 @@ public class Player_SkillManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(instance == this)
+        if (instance == this)
             instance = null;
     }
 }
