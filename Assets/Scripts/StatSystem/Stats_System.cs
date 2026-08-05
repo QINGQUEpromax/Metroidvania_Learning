@@ -67,30 +67,25 @@ public class Stats_System : MonoBehaviour
 
     public float GetPhysicalDamage(out bool isCrit, float scaleFactor = 1f)
     {
-        float baseDamage = offense.damage.GetValue();
-        float bonusDamage = major.strength.GetValue();
-        float totalBaseDamage = baseDamage + bonusDamage;
+        float baseDamage = GetBaseDamage();
+        float critChance = Getcritchance();
 
-        float baseCritChance = offense.critChance.GetValue();
-        float bonusCritChance = major.agility.GetValue() * .3f;
-        float critChance = baseCritChance + bonusCritChance;
-
-        float baseCritPower = offense.critPower.GetValue();
-        float bonusCritPower = major.strength.GetValue();
-        float critPower = (baseCritPower + bonusCritPower) / 100;
+        float critPower = GetcritPower() / 100;
 
         isCrit = Random.Range(0, 100) < critChance;
 
-        float finalDamage = isCrit ? totalBaseDamage * (1 + critPower) : totalBaseDamage;
+        float finalDamage = isCrit ? baseDamage * (1 + critPower) : baseDamage;
 
         return finalDamage * scaleFactor;
     }
 
+    public float GetBaseDamage() => offense.damage.GetValue() + major.strength.GetValue();
+    public float Getcritchance() => offense.critChance.GetValue() + (major.agility.GetValue() * .3f);
+    public float GetcritPower() => offense.critPower.GetValue() + (major.strength.GetValue() * .5f);
+
     public float GetArmorMitigation(float armorReduction)
     {
-        float baseArmor = defense.armor.GetValue();
-        float bonusArmor = major.vitality.GetValue();
-        float totalArmor = baseArmor + bonusArmor;
+        float totalArmor = GetBaseArmor();
 
         float reductionMultiplier = Mathf.Clamp01(1 - armorReduction);
         float effectiveArmor = totalArmor * reductionMultiplier;
@@ -102,6 +97,8 @@ public class Stats_System : MonoBehaviour
 
         return finalMitigation;
     }
+
+    public float GetBaseArmor() => defense.armor.GetValue() + major.vitality.GetValue();
 
     public float GetArmorReduction()
     {

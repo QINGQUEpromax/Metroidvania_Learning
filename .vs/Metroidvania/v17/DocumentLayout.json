@@ -3,92 +3,32 @@
   "WorkspaceRootPath": "D:\\Unity Program\\Metroidvania\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\skillsystem\\skill_swordthrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skill_swordthrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\ui\\ui_statslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\ui_statslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\skillsystem\\skill_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skill_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\ui\\ui_playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\ui_playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\player\\playerstate\\playergrounded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\player\\playerstate\\playergrounded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\enum\\stattype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enum\\stattype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\ui\\ui_itemtooltip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\ui_itemtooltip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\enemy\\enemy_skeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\enemy\\enemy_skeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\ui\\ui_itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\ui_itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\ui\\ui_skilltooltip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\ui_skilltooltip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\statsystem\\stats_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statsystem\\stats_system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\player\\playerstate\\player_domainexpansion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\player\\playerstate\\player_domainexpansion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\player\\playerstate\\playerdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\player\\playerstate\\playerdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\player\\player_skillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\player\\player_skillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\skillsystem\\skillobject_domainexpansion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skillobject_domainexpansion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\skillsystem\\skill_dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skill_dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\enemy\\enemy_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\enemy\\enemy_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\character_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\character\\player\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\player\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\enum\\skillupgradetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enum\\skillupgradetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\skillsystem\\skill_domainexpansion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skill_domainexpansion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\skillsystem\\skill_shard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skill_shard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\statsystem\\stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statsystem\\stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|D:\\Unity Program\\Metroidvania\\assets\\scripts\\skillsystem\\skillobject_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skillobject_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\skillsystem\\skillobject_shard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skillsystem\\skillobject_shard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|d:\\unity program\\metroidvania\\assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B39237E-EB72-FD6B-2E8B-43A009CC29FC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\dsds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\dsds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,138 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Skill_SwordThrow.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_SwordThrow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\Skill_SwordThrow.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_SwordThrow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\Skill_SwordThrow.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAowEYAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T11:10:18.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerGrounded.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerGrounded.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerGrounded.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerGrounded.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerGrounded.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T11:10:08.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Enemy_Skeleton.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Enemy\\Enemy_Skeleton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Enemy\\Enemy_Skeleton.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Enemy\\Enemy_Skeleton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Enemy\\Enemy_Skeleton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T11:09:33.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UI_SkillToolTip.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_SkillToolTip.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI_SkillToolTip.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_SkillToolTip.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UI_SkillToolTip.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwD4AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T11:07:01.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlayerDash.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerDash.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerDash.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerDash.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Player\\PlayerState\\PlayerDash.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwBgAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:48:44.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Enemy_Health.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Enemy\\Enemy_Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Enemy\\Enemy_Health.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Enemy\\Enemy_Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Enemy\\Enemy_Health.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:47:32.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Stat.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\StatSystem\\Stat.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\StatSystem\\Stat.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\StatSystem\\Stat.cs",
-              "RelativeToolTip": "Assets\\Scripts\\StatSystem\\Stat.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:38:18.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Enemy\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Enemy\\Enemy.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Enemy\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Enemy\\Enemy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:35:56.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Skill_Dash.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_Dash.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\Skill_Dash.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_Dash.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\Skill_Dash.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwB4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:26:35.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SkillObject_Shard.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\SkillObject_Shard.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\SkillObject_Shard.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\SkillObject_Shard.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\SkillObject_Shard.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwCkAAACCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:02:55.892Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -244,94 +54,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Skill_Shard.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_Shard.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\Skill_Shard.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_Shard.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\Skill_Shard.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAYwDQAAAAzAAAA",
+              "DocumentIndex": 2,
+              "Title": "StatType.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enum\\StatType.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enum\\StatType.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enum\\StatType.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enum\\StatType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T10:01:24.347Z",
+              "WhenOpened": "2026-08-05T13:29:18.672Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Character.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Character.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAqwHgAAAAFAAAA",
+              "DocumentIndex": 1,
+              "Title": "UI_PlayerStats.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_PlayerStats.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI_PlayerStats.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_PlayerStats.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UI_PlayerStats.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T09:09:37.9Z",
+              "WhenOpened": "2026-08-05T13:16:46.976Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SkillObject_DomainExpansion.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\SkillObject_DomainExpansion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\SkillObject_DomainExpansion.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\SkillObject_DomainExpansion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\SkillObject_DomainExpansion.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAowC0AAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "UI_StatSlot.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_StatSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI_StatSlot.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_StatSlot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UI_StatSlot.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAGUAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:49:31.629Z",
+              "WhenOpened": "2026-08-05T10:23:48.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Player_DomainExpansion.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState\\Player_DomainExpansion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Player\\PlayerState\\Player_DomainExpansion.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState\\Player_DomainExpansion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Player\\PlayerState\\Player_DomainExpansion.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwDIAAAAeAAAA",
+              "Title": "dsds.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\dsds.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\dsds.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\dsds.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\dsds.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:12:09.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-05T08:58:25.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PlayerState.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Player\\PlayerState.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\PlayerState.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Player\\PlayerState.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAwC8AAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "Stats_System.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StatSystem\\Stats_System.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAkwFoAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:38:01.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-05T13:00:10.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Skill_DomainExpansion.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_DomainExpansion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\Skill_DomainExpansion.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_DomainExpansion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\Skill_DomainExpansion.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAgwEwAAAAkAAAA",
+              "DocumentIndex": 3,
+              "Title": "UI_ItemToolTip.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_ItemToolTip.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI_ItemToolTip.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_ItemToolTip.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UI_ItemToolTip.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAgwFgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T08:34:05.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SkillUpgradeType.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enum\\SkillUpgradeType.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enum\\SkillUpgradeType.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Enum\\SkillUpgradeType.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enum\\SkillUpgradeType.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAABkAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T08:45:47.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-05T10:33:10.035Z"
             },
             {
               "$type": "Bookmark",
@@ -339,68 +133,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Character_Health.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character_Health.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Character_Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Character_Health.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAsAAAA",
+              "DocumentIndex": 4,
+              "Title": "UI_ItemSlot.cs",
+              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_ItemSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI_ItemSlot.cs",
+              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\UI\\UI_ItemSlot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UI_ItemSlot.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T15:29:18.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SkillObject_Base.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\SkillObject_Base.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\SkillObject_Base.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\SkillObject_Base.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\SkillObject_Base.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAYwDUAAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T07:06:24.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Skill_Base.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_Base.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SkillSystem\\Skill_Base.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\SkillSystem\\Skill_Base.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SkillSystem\\Skill_Base.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACUAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T07:05:47.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Player.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Player\\Player.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\Player.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Player\\Player.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAkwEwAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T06:48:59.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Player_SkillManager.cs",
-              "DocumentMoniker": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\Player_SkillManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Player\\Player_SkillManager.cs",
-              "ToolTip": "D:\\Unity Program\\Metroidvania\\Assets\\Scripts\\Character\\Player\\Player_SkillManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character\\Player\\Player_SkillManager.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAwwC4AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T05:35:10.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-04T07:58:16.122Z"
             }
           ]
         }
