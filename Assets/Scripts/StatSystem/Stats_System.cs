@@ -10,6 +10,11 @@ public class Stats_System : MonoBehaviour
     public Stats_MajorGroup major;
 
 
+    protected virtual void Awake()
+    {
+
+    }
+
     public float GetElementDamage(out ElementType element, float scaleFactor = 1f)
     {
         float fireDamage = offense.fireDamage.GetValue();

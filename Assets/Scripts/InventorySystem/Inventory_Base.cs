@@ -14,38 +14,44 @@ public class Inventory_Base : MonoBehaviour
 
     }
 
-    public bool CanAddItem() => itemList.Count < maxInventorySize;
-
-    public bool CanAddToStack(Inventory_Item itemToAdd)
+    public void TryUseItem(Inventory_Item itemToUse)
     {
-        List<Inventory_Item> stackableItems = itemList.FindAll(item => item.itemData == itemToAdd.itemData);
-        foreach (var stack in stackableItems)
-        {
-            if (stack.CanAddStack())
-                return true;
-        }
+        Inventory_Item consumable = itemList.Find(item => item == itemToUse);
 
-        return false;
+        if (consumable == null)
+            return;
+
+        consumable.itemEffect.ExecuteEffect();
+
+        if (consumable.stackSize > 1)
+            consumable.RemoveStack();
+        else
+            RemoveItem(consumable);
+
+        OnInventoryChange?.Invoke();
     }
 
-    public Inventory_Item StackableItem(Inventory_Item itemToAdd)
+    public bool CanAddItem() => itemList.Count < maxInventorySize;
+
+    public Inventory_Item FindStackable(Inventory_Item itemToAdd)
     {
         List<Inventory_Item> stackableItems = itemList.FindAll(item => item.itemData == itemToAdd.itemData);
+
         foreach (var stackableItem in stackableItems)
         {
             if (stackableItem.CanAddStack())
                 return stackableItem;
         }
-        return null;
 
+        return null;
     }
 
     public void AddItem(Inventory_Item itemToAdd)
     {
 
-        Inventory_Item itemInInventory = FindItem(itemToAdd.itemData);
+        Inventory_Item itemInInventory = FindStackable(itemToAdd);
 
-        if (itemInInventory != null && itemInInventory.CanAddStack())
+        if (itemInInventory != null)
             itemInInventory.AddStack();
         else
             itemList.Add(itemToAdd);
@@ -55,7 +61,7 @@ public class Inventory_Base : MonoBehaviour
 
     public void RemoveItem(Inventory_Item itemToRemove)
     {
-        itemList.Remove(FindItem(itemToRemove.itemData));
+        itemList.Remove(itemToRemove);
         OnInventoryChange?.Invoke();
     }
 
@@ -63,4 +69,6 @@ public class Inventory_Base : MonoBehaviour
     {
         return itemList.Find(item => item.itemData == itemData);
     }
+
+    public void TriggerUpdateUI() => OnInventoryChange?.Invoke();
 }

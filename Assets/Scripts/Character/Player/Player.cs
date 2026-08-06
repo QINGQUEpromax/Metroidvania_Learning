@@ -159,9 +159,11 @@ public class Player : Character
         inputActions.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         inputActions.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
-        inputActions.Player.ToggleSkillTreeUI.performed += ctx => ui.ToggleSkillTreeUI();
         inputActions.Player.Spell.performed += ctx => Player_SkillManager.instance.shard.TryUseSkill();
         inputActions.Player.Spell.performed += ctx => Player_SkillManager.instance.timeEcho.TryUseSkill();
+
+        inputActions.Player.ToggleSkillTreeUI.performed += ctx => ui.ToggleSkillTreeUI();
+        inputActions.Player.ToggleInventoryrUI.performed += ctx => ui.ToggleInventoryUI();
     }
 
     private void OnDisable()

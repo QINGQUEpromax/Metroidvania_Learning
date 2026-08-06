@@ -116,6 +116,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleInventoryrUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""42a77a16-3d6f-4542-996a-350545de1c4b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -272,6 +281,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""UltimateSpell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3f408ac3-3688-4c10-b846-b94808956f11"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard & Mousea"",
+                    ""action"": ""ToggleInventoryrUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -307,6 +327,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_RangeAttack = m_Player.FindAction("RangeAttack", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
         m_Player_UltimateSpell = m_Player.FindAction("UltimateSpell", throwIfNotFound: true);
+        m_Player_ToggleInventoryrUI = m_Player.FindAction("ToggleInventoryrUI", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -378,6 +399,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_RangeAttack;
     private readonly InputAction m_Player_Mouse;
     private readonly InputAction m_Player_UltimateSpell;
+    private readonly InputAction m_Player_ToggleInventoryrUI;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -392,6 +414,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @RangeAttack => m_Wrapper.m_Player_RangeAttack;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
         public InputAction @UltimateSpell => m_Wrapper.m_Player_UltimateSpell;
+        public InputAction @ToggleInventoryrUI => m_Wrapper.m_Player_ToggleInventoryrUI;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -431,6 +454,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @UltimateSpell.started += instance.OnUltimateSpell;
             @UltimateSpell.performed += instance.OnUltimateSpell;
             @UltimateSpell.canceled += instance.OnUltimateSpell;
+            @ToggleInventoryrUI.started += instance.OnToggleInventoryrUI;
+            @ToggleInventoryrUI.performed += instance.OnToggleInventoryrUI;
+            @ToggleInventoryrUI.canceled += instance.OnToggleInventoryrUI;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -465,6 +491,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @UltimateSpell.started -= instance.OnUltimateSpell;
             @UltimateSpell.performed -= instance.OnUltimateSpell;
             @UltimateSpell.canceled -= instance.OnUltimateSpell;
+            @ToggleInventoryrUI.started -= instance.OnToggleInventoryrUI;
+            @ToggleInventoryrUI.performed -= instance.OnToggleInventoryrUI;
+            @ToggleInventoryrUI.canceled -= instance.OnToggleInventoryrUI;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -503,5 +532,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnRangeAttack(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
         void OnUltimateSpell(InputAction.CallbackContext context);
+        void OnToggleInventoryrUI(InputAction.CallbackContext context);
     }
 }
