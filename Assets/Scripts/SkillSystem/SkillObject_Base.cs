@@ -44,8 +44,9 @@ public class SkillObject_Base : MonoBehaviour
             ElementalEffectData effectData = new ElementalEffectData(playerStats, damageScaleData);
             float physDamage = playerStats.GetPhysicalDamage(out bool isCrit, damageScaleData.phyiscal);
             float elemDamage = playerStats.GetElementDamage(out ElementType element, damageScaleData.elemental);
-
-            damagable.TakeDamage(physDamage, elemDamage, element, health.CalculateDuration(physDamage), transform);
+            Character_Health targetHealth = target.gameObject.GetComponent<Character_Health>();
+            float duration = targetHealth != null ? targetHealth.CalculateDuration(physDamage) : 0;
+            damagable.TakeDamage(physDamage, elemDamage, element, duration, transform);
 
             if (element != ElementType.None)
                 target.GetComponent<Entity_StatusHandler>().ApplyStatusEffect(element, effectData);

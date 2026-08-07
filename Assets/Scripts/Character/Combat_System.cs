@@ -1,9 +1,10 @@
 using UnityEngine;
+using System;
 
 public class Combat_System : MonoBehaviour
 {
+    public event Action<float> OnDoingPhysicalDamage;
     private Character character => GetComponent<Character>();
-    private Character_Health health => GetComponent<Character_Health>();
     private Stats_System stats => GetComponent<Stats_System>();
     public DamageScaleData basicAttackScale;
 
@@ -53,14 +54,17 @@ public class Combat_System : MonoBehaviour
             ElementalEffectData effectData = new ElementalEffectData(stats, basicAttackScale);
 
             float elementDamage = stats.GetElementDamage(out ElementType element);
-            float damage = stats.GetPhysicalDamage(out bool isCrit);
-            damagable?.TakeDamage(damage, elementDamage, element, health.CalculateDuration(damage), transform);
+            float PhysicalDamage = stats.GetPhysicalDamage(out bool isCrit);
+            Character_Health targetHealth = target.gameObject.GetComponent<Character_Health>();
+            float duration = targetHealth != null ? targetHealth.CalculateDuration(PhysicalDamage) : 0;
+            damagable?.TakeDamage(PhysicalDamage, elementDamage, element, duration, transform);
 
             if (element != ElementType.None && target.GetComponent<Character>() != null)
                 target.GetComponent<Entity_StatusHandler>().ApplyStatusEffect(element, effectData);
 
             if (target.gameObject.GetComponent<Character_VFX>() != null)
             {
+                OnDoingPhysicalDamage?.Invoke(PhysicalDamage);
                 target.gameObject.GetComponent<Character_VFX>().CreateHitVfx(isCrit,element);
             }
 

@@ -12,6 +12,7 @@ public class Player : Character
     public Player_VFX vfx { get; private set; }
     public Character_Health health { get; private set; }
     public Entity_StatusHandler statusHandler { get; private set; }
+    public Player_Combat playerCombat {  get; private set; }
 
 
     #region 角色状态变量声明
@@ -64,6 +65,7 @@ public class Player : Character
         vfx = GetComponent<Player_VFX>();
         health = GetComponent<Character_Health>();
         statusHandler = GetComponent<Entity_StatusHandler>();
+        playerCombat = GetComponent<Player_Combat>();
 
         inputActions = new InputActions();
        

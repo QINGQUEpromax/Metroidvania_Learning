@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_VFX : Character_VFX
@@ -10,9 +9,14 @@ public class Player_VFX : Character_VFX
     [SerializeField] private GameObject imageEchoPrefab;
     private Coroutine imageEchoCo;
 
+    public void CreateEffectof(GameObject effect, Transform target)
+    {
+        Instantiate(effect, target.position, Quaternion.identity);
+    }
+
     public void DoImageEchoEffect(float duration)
     {
-        if(imageEchoCo != null)
+        if (imageEchoCo != null)
             StopCoroutine(imageEchoCo);
 
         imageEchoCo = StartCoroutine(ImageEchoEffectCo(duration));
@@ -22,7 +26,7 @@ public class Player_VFX : Character_VFX
     {
         float timeTracker = 0;
 
-        while(timeTracker < duration)
+        while (timeTracker < duration)
         {
             CreateImageEcho();
 
@@ -36,5 +40,5 @@ public class Player_VFX : Character_VFX
         GameObject imageEcho = Instantiate(imageEchoPrefab, transform.position, transform.rotation);
         imageEcho.GetComponent<SpriteRenderer>().sprite = sr.sprite;
     }
-    
+
 }

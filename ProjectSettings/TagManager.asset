@@ -15,7 +15,7 @@ TagManager:
   - Background
   - Player
   - Enemy
-  - PlayerPickups
+  - PlayerInteractable
   - SkillObjectSword
   - 
   - 

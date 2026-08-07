@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Character_Health : MonoBehaviour, IDamagable
 {
+    public event Action OnTakingDamage;
+
     private Slider healthBar;
     private Character_VFX vfx;
     private Character character;
@@ -54,7 +57,7 @@ public class Character_Health : MonoBehaviour, IDamagable
         if (stats == null)
             return false;
         else
-            return Random.Range(0, 100) < stats.GetEvasion();
+            return UnityEngine.Random.Range(0, 100) < stats.GetEvasion();
     }
 
     //ÊÜÉËÂß¼­
@@ -76,6 +79,8 @@ public class Character_Health : MonoBehaviour, IDamagable
         ReduceHealth(PhysicalDamage + finalElementDamage);
 
         lastDamageTaken = PhysicalDamage + finalElementDamage;
+
+        OnTakingDamage?.Invoke();
     }
 
     public void SetCanTakeDamage(bool canTakeDamage) => this.canTakeDamage = canTakeDamage;
